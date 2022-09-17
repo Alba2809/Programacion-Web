@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<!--Fig. 2.13: tabla2.html-->
+<!--Tabla de HTML5 compleja-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla compleja</title>
+</head>
+<body>
+    <a href="/index.html">Regresar</a>
+    <br>
+    <a href="/HTML5/Capitulo 1/Ejemplos/Ejemplo 12 - Formulario simple.html">Siguiente</a>
+    <br>
+    <a href="/HTML5/Capitulo 1/Ejercicios/Ejercicio 2-9.html">Ir al Ejercicio 2.9</a>
+    <hr>
+    <h1>Ejemplo de tabla: combinado de filas y columnas</h1>
+
+    <table border="1">
+        <caption>Una tabla de muestra m&aacute;s compleja</caption>
+
+        <thead>
+            <!--los elementos rowspan y colspan combinan el número-->
+            <!--especificado de celdas en sentido vertical u horizontal-->
+            <tr>
+                <!--combina dos filas-->
+                <th rowspan="2">
+                    <img src="Imagenes/camello.jpg" width="205" 
+                    height="167" alt="Imagen de un camello con una joroba">
+                </th>
+
+                <!--combina cuatro columnas-->
+                <th colspan="4">
+                    <strong>Comparaci&oacute;n de cam&eacute;lidos</strong><br>
+                    Fecha aproximada: 09/2022
+                </th>
+            </tr>
+            <tr>
+                <th># jorobas</th>
+                <th>Regi&oacute;n ind&iacute;gena</th>
+                <th>¿Escupe?</th>
+                <th>¿Produce lana?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Camellos (bactrianos)</th>
+                <td>2</td>
+                <td>Africa/Asia</td>
+                <td>S&iacute;</td>
+                <td>S&iacute;</td>
+            </tr>
+            <tr>
+                <th>Llamas</th>
+                <td>1</td>
+                <td>Monta&ntilde;as de los Andes</td>
+                <td>S&iacute;</td>
+                <td>S&iacute;</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

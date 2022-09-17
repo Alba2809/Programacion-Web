@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3.8</title>
+</head>
+<body>
+    <a href="/index.html">Regresar</a>
+    <br>
+    <a href="/HTML5/Capitulo 2/Ejercicios/Ejercicio 3-9.html">Siguiente</a>
+    <hr>
+
+    <h2>
+        (Creaci&oacute;n de un formulario <em>autocomplete</em> con un elemento datalist) Cree un elemento <em>input autocomplete</em> con un elemento <em>datalist</em> asociado que contenga los d&iacute;as de la semana.
+    </h2>
+    <hr>
+
+    <h1>D&iacute;a de la semana</h1>
+    <form autocomplete="on" method="post">
+        <p>
+            <label for="listaSemana">
+                D&iacute;a:
+                <input type="text" placeholder="Lunes..." id="listaSemana" list="semana">
+                <datalist id="semana">
+                    <option value="Lunes"></option>
+                    <option value="Martes"></option>
+                    <option value="Miercoles"></option>
+                    <option value="Jueves"></option>
+                    <option value="Viernes"></option>
+                    <option value="Sabado"></option>
+                    <option value="Domingo"></option>
+                </datalist>
+            </label>
+        </p>
+    </form>
+</body>
+</html>

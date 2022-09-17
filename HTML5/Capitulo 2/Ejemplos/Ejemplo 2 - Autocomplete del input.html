@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<!--Fig. 3.20: autocomplete.html-->
+<!--El nuevo atributo autocomplete y el elemento datalist-->
+<!--de formularios de HTML5.-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El nuevo atributo autocomplete y el elemento
+        datalist de HTML5
+    </title>
+</head>
+<body>
+    <a href="/index.html">Regresar</a>
+    <br>
+    <a href="/HTML5/Capitulo 2/Ejemplos/Ejemplo 3 - Elementos section.html">Siguiente</a>
+    <hr>
+    <h1>Demo de autocomplete y datalist</h1>
+    <p>
+        Este formulario demuestra el nuevo atributo autocomplete
+        de HTML y el elemento datalist.
+    </p>
+
+    <!--activar autocomplete-->
+    <form autocomplete="on" method="post">
+        <p>
+            <label>
+                Primer nombre:
+                <input type="text" id="primerNombre"
+                    placeholder="Primer nombre">
+                (Primer nombre)
+            </label>
+        </p>
+        <p>
+            <label>
+                Apellido:
+                <input type="text" id="apellido"
+                    placeholder="Apellido">
+                (Apellido)
+            </label>
+        </p>
+        <p>
+            <label>
+                Email:
+                <input type="email" id="email"
+                    placeholder="nombre@dominio.com">
+                (nombre@dominio.com)
+            </label>
+        </p>
+        <p>
+            <label for="listaTexto">
+                Mes de nacimiento:
+                <input type="text" id="listaTexto"
+                    placeholder="Selecciona un mes" list="meses">
+                <datalist id="meses">
+                    <option value="Enero"></option>
+                    <option value="Febrero"></option>
+                    <option value="Marzo"></option>
+                    <option value="Abril"></option>
+                    <option value="Mayo"></option>
+                    <option value="Junio"></option>
+                    <option value="Agosto"></option>
+                    <option value="Septiembre"></option>
+                    <option value="Octubre"></option>
+                    <option value="Noviembre"></option>
+                    <option value="Diciembre"></option>
+                </datalist>
+            </label>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+        </p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2.16</title>
+</head>
+<body>
+    <a href="/index.html">Regresar</a>
+    <br>
+    <a href="/HTML5/Capitulo 1/Ejercicios/Ejercicio 2-17.html">Siguiente</a>
+    <hr>
+    <h3>
+        Una universidad local le pidi&oacute; que creara un
+        documento de HTML5 que permita a los futuros estudiantes
+        universitarios proveer retroalimentaci&oacute;n sobre
+        su visita al campus. Su documento de HTML5 debe contener
+        un formulario con <em>campos de texto</em> para un <em>nombre</em> y un 
+        <em>correo electr&oacute;nico</em>. Proporcione <em>casillas de 
+        verificaci&oacute;n</em> que permitan a los futuros
+        estudiantes indicar lo que les gust&oacute; m&aacute;s
+        sobre el campus. Las casillas de verificaci&oacute;n
+        deben de incluir:<em>campus, estudiantes, ubicaci&oacute;n,
+        ambiente, dormitorios y deportes</em>. Proporcione 
+        adem&aacute;s botones de opci&oacute;n que pregunten a
+        los futuros estudiantes c&oacute;mo supieron sobre la 
+        universidad. Las opciones deben incluir: <em>amigos,
+        televisi&oacute;n, Internet y otro</em>. Adem&aacute;s,
+        proporcione un &aacute;rea de texto para comentarios 
+        adicionales, un bot&oacute;n para enviar y un bot&oacute;n
+        para restablecer. Use post para enviar la informaci&oacute;n
+        en el formulario a <em>http://www.deitel.com</em>.
+    </h3>
+    <hr>
+    <h1>Formulario</h1>
+    <p><b>Llene el siguiente formulario:</b></p>
+    <form action="http://www.deitel.com" method="post">
+        <p>
+            <label><b>Nombre:</b>
+                <input type="text" name="nombre" size="28">
+            </label>
+        </p>
+        <p>
+            <label><b>Email:</b>
+                <input type="text" name="correo" size="30">
+            </label>
+        </p>
+        <p>
+            <b>¿Qué le gust&oacute; m&aacute; sobre el campus?:</b>
+            <br>
+            <label>
+                <input type="checkbox" name="cosasgustaron"
+                    value="Campus" style="text-align: left;">
+                Campus
+            </label><br>
+            <label>
+                <input type="checkbox" name="cosasgustaron"
+                    value="Estudiantes">
+                Estudiantes
+            </label><br>
+            <label>
+                <input type="checkbox" name="cosasgustaron" 
+                    value="Ubicacion">
+                Ubicaci&oacute;n
+            </label><br>
+            <label>
+                <input type="checkbox" name="cosasgustaron" 
+                    value="Ambiente">
+                Ambiente
+            </label><br>
+            <label>
+                <input type="checkbox" name="cosasgustaron" 
+                    value="Dormitorios">
+                Dormitorios
+            </label><br>
+            <label>
+                <input type="checkbox" name="cosasgustaron" 
+                    value="Deportes">
+                Deportes
+            </label>
+        </p>
+        
+        <p>
+            <b>¿C&oacute;mo supo sobre la universidad?<br></b>
+            <label>
+                <input type="radio" name="comositio" 
+                    value="Amigos">
+                Amigos
+            </label><br>
+            <label>
+                <input type="radio" name="comositio" 
+                    value="Television">
+                Televisi&oacute;n
+            </label><br>
+            <label>
+                <input type="radio" name="comositio" 
+                    value="Internet">
+                Internet
+            </label><br>
+            <label>
+                <input type="radio" name="comositio" 
+                    value="Otro">
+                Otro
+            </label>
+        </p>
+
+        <p>
+            <label>
+                <b>Comentarios:</b><br>
+                <textarea name="comentarios" cols="36" rows="4"></textarea>
+            </label>
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+        </p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3.5</title>
+</head>
+<body>
+    <a href="/index.html">Regresar</a>
+    <br>
+    <a href="/HTML5/Capitulo 2/Ejercicios/Ejercicio 3-6.html">Siguiente</a>
+    <hr>
+
+    <h1>
+        3.5 Escriba un elemento (o elementos) de HTML5 para realizar cada una de las siguientes tareas:
+    </h1>
+    <ol type="a">
+        <!--a)-->
+        <li style="font-size: 20px;font-weight: bold;">
+            Se pidi&oacute; a los estudiantes que clasificaran los alimentos en la cafeter&iacute;a, en una escala del 1 al 10. Use un elemento <em>meter</em> con texto a su izquierda y a su derecha para indicar que la calificaci&oacute;n promedio fue 7 de 10.
+        </li>
+        <p style="font-size: 18px;">
+            1 <meter 
+                min="1"
+                max="10"
+                value="7"></meter> 10
+        </p>
+        <!--b)-->
+        <li style="font-size: 20px;font-weight: bold;">
+            Cree un elemento <em>details</em> que muestre el texto "<em>Resultados de la encuesta</em>" en el elemento <em>summary</em> para la parte (a). Cuando el usuario haga clic en la flecha enseguida del texto de <em>summary</em>, deber&aacute; aparecer un p&aacute;rrafo que explique sobre la encuesta.
+        </li>
+        <p style="font-size: 18px;">
+            <details>
+                <summary>
+                    <b>Resultados de la encuesta.</b>
+                </summary>
+                <p>
+                    De la encuesta realiza a los estudiantes sobre los alimentos en la cafeter&iacute;a, la calificaci&oacute;n promedio fue 7 de 10.
+                </p>
+            </details>
+        </p>
+        <!--c)-->
+        <li style="font-size: 20px;font-weight: bold;">
+            Cree un elemento <em>input text</em> para el primer nombre. El elemento deber&aacute; recibir el enfoque de manera autom&aacute;tica al momento de desplegar el formulario en un navegador.
+        </li>
+        <form method="post">
+            <p style="font-size: 18px;">
+                <label>
+                    Nombre:
+                    <input type="text" name="nombre" maxlength="40" autofocus>
+                </label>
+            </p>
+        </form>
+        <!--d)-->
+        <li style="font-size: 20px;font-weight: bold;">
+            Modifique la parte (c) de modo que se elimine <em>label</em> y use texto en un elemento <em>placeholder</em> en el elemento <em>input</em>.
+        </li>
+        <form method="post">
+            <p style="font-size: 18px;">
+                <input type="text" name="nombre" maxlength="40" placeholder="Nombre">                
+            </p>
+        </form>
+        <!--e)-->
+        <li style="font-size: 20px;font-weight: bold;">
+            Use un elemento <em>datalist</em> para proveer una lista <em>autocomplete</em> para cinco estados.
+        </li>
+        <form autocomplete="on" method="post">
+            <p style="font-size: 18px;">
+                <label for="listaEstados">
+                    Estados:
+                    <input type="text" placeholder="Seleccione un estado" id="listaEstados" list="estados">
+                    <datalist id="estados">
+                        <option value="Veracruz"></option>
+                        <option value="Chiapas"></option>
+                        <option value="Chihuahua"></option>
+                        <option value="Oaxaca"></option>
+                        <option value="Yucatán"></option>
+                    </datalist>
+                </label>
+            </p>
+        </form>
+        <!--f)-->
+        <li style="font-size: 20px;font-weight: bold;">
+            Cree un elemento <em>input range</em> que permita al usuario seleccionar un n&uacute;mero del 1 al 100.
+        </li>
+        <p style="font-size: 18px;">
+            <label>
+                Rango:
+                1 <input type="range" min="1" max="100" value="50"> 100
+            </label>
+        </p>
+        <!--g)-->
+        <li style="font-size: 20px;font-weight: bold;">
+            Especifique que no debe permitirse el atributo <em>autocomplete</em> en un formulario. Muestre s&oacute;lo la etiqueta de apertura del formulario.
+        </li>
+        <p style="font-size: 18px;">
+            Etiqueta de apertura del formulario: <br>
+            <em>&lt;form action="" method="post"></em>
+        </p>
+        <!--h)-->
+        <li style="font-size: 20px;font-weight: bold;">
+            Use un elemento <em>mark</em> para resaltar el segundo enunciado del siguiente p&aacute;rrafo: 
+        </li>
+        <p style="font-size: 18px;">
+            <em>
+                &lt;p>Se pidi&amp;oacute; a los estudiantes que calificaran los alimentos en la cafeter&amp;iacute;a <br><mark>En una escala del 1 al 10. El resultado promedio fue 7.&lt;/p></mark>
+            </em>
+        </p>
+    </ol>
+</body>
+</html>

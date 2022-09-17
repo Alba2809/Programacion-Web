@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3.6</title>
+</head>
+<body>
+    <a href="/index.html">Regresar</a>
+    <br>
+    <a href="/HTML5/Capitulo 2/Ejercicios/Ejercicio 3-7.html">Siguiente</a>
+    <hr>
+
+    <h3>
+        3.6 (Formulario de registro Web con encuesta opcional). Cree un formulario de registro de un sitio Web para obtener el primer nombre, apellido y dirección de correo electrónico de un usuario. Incluya adem&aacute;s una pregunta de encuesta 
+        opcional que pida el año en el que se encuentra el usuario en la universidad (por ejemplo, primer año). Coloque la pregunta de encuesta opcional en el elemento details que el usuario puede expandir para ver la pregunta.
+    </h3>
+    <hr>
+
+    <h1>Registro Web</h1>
+    <form autocomplete="on" method="post">
+        <p>
+            <label>
+                Nombre:
+                <input type="text" name="nombre" maxlength="40" required>
+            </label>
+        </p>
+        <p>
+            <label>
+                Apellido:
+                <input type="text" name="apellido" maxlength="40" required>
+            </label>
+        </p>
+        <p>
+            <label>
+                Correo:
+                <input type="email" placeholder="nombre@dominio.com" required>
+            </label>
+        </p>
+        <details>
+            <summary>Pregunta opcional.</summary>
+            <p>
+                <label>
+                    A&ntilde;o de universidad:
+                    <input type="number" min="1" max="5">
+                </label>
+            </p>
+        </details>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+        </p>
+    </form>
+</body>
+</html>
