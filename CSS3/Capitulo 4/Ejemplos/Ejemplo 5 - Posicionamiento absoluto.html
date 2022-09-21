@@ -8,9 +8,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Posicionamiento absoluto</title>
+
+    <style type="text/css">
+        .imagen_fondo { position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    z-index: 1; }
+        .imagen_primerplano { position: absolute;
+                    top: 25px;
+                    left: 100px;
+                    z-index: 2;}
+        .texto { position: absolute;
+                top: 25px;
+                left: 100px;
+                z-index: 3;
+                font-size: 20pt;
+                font-family: Tahoma, Geneva, sans-serif; }
+    </style>
 </head>
 <body>
-    
+    <p>
+        <img src="/CSS3/Capitulo 4/Ejemplos/Imagenes/imagen_fondo.png" alt="Primera imagen posicionada" class="imagen_fondo" width="200px" height="200px">
+    </p>
+
+    <p>
+        <img src="/CSS3/Capitulo 4/Ejemplos/Imagenes/imagen_primerplano.png" alt="Segunda imagen posicionada" class="imagen_primerplano" width="100px" height="100px">
+    </p>
+
+    <p class="texto">Texto posicionado</p>
 </body>
 </html>
