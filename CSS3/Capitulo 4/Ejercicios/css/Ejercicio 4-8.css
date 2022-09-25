@@ -1,0 +1,12 @@
+h1 { color: blue; }
+a:link { 
+    text-decoration: none; 
+    color: blue;
+}
+a:visited { 
+    text-decoration: none; 
+    color: blue;
+}
+a:hover { background-color: yellow; }
+
+p,ul { font-size: 15pt; }

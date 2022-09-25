@@ -1,0 +1,28 @@
+nav {
+    font-weight: bold;
+    color: darkgreen;
+    border: 2px solid rgb(65, 225, 73);
+    text-align: center;
+    width: 10em;
+    background-color: rgb(65, 225, 73);
+}
+nav ul {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav:hover ul { display: block; }
+nav ul li {
+    border-top: 2px solid rgb(65, 225, 73);
+    background-color: white;
+    width: 10em;
+}
+nav ul li:hover { 
+    background-color: rgb(176, 230, 207); 
+}
+a { 
+    text-decoration: none; 
+    color: darkgreen;
+}
+nav ul li:hover a { color: darkorange; }
