@@ -9,21 +9,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estilos en l&iacute;nea</title>
+
+    <style type="text/css">
+        header {
+            text-align: center;
+            font-size: xx-large;
+            background-color: darkcyan;
+            padding: 10px;
+        }
+        .nombre {
+            font-size: large;
+            font-family: cursive;
+        }
+        .contenido {
+            padding-left: 10%;
+            padding-right: 10%
+        }
+        button {
+            padding: 5px;
+            color: white;
+            background-color: black;
+            font-size: 12pt;
+        }
+        button:hover{
+            background-color: grey;
+            color: black;
+        }
+        body { margin:auto; }
+    </style>
+
 </head>
 <body>
-    <p>
-        Este texto no tiene aplicado ning&uacute;n estilo.
 
-        <!--EL atributo style nos permite declarar-->
-        <!--estilos en línea. Debemos separar varias-->
-        <!--propiedades de style con un punto y coma-->
-        <p style="font-size: 20pt;">
-            Este texto tiene aplicado el estilo <em>font-size</em>, para que sea de 20pt.
+    <header>
+        Ejemplo 1<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
         </p>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/CSS3/Capitulo 4/Ejemplos/Ejemplo 2 - Hoja estilo incrustada.html"><button type="submit">Siguiente</button></a>
+    </header>
 
-        <p style="font-size: 20pt;color: deepskyblue;">
-            Este texto tiene aplicados los estilos <em>font-size</em> y <em>color</em>, para que sea de 20pt y de color azul cielo profundo.
+    <div class="contenido">
+        <p>
+            Este texto no tiene aplicado ning&uacute;n estilo.
+    
+            <!--EL atributo style nos permite declarar-->
+            <!--estilos en línea. Debemos separar varias-->
+            <!--propiedades de style con un punto y coma-->
+            <p style="font-size: 20pt;">
+                Este texto tiene aplicado el estilo <em>font-size</em>, para que sea de 20pt.
+            </p>
+    
+            <p style="font-size: 20pt;color: deepskyblue;">
+                Este texto tiene aplicados los estilos <em>font-size</em> y <em>color</em>, para que sea de 20pt y de color azul cielo profundo.
+            </p>
         </p>
-    </p>
+    </div>
 </body>
 </html>

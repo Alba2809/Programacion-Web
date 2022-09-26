@@ -15,18 +15,60 @@
                 background-position: bottom right;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
-                background-color: lightgray; }
+                background-color: lightgray; 
+                margin: auto;
+        }
         p { font-size: 18pt;
             color: darkblue;
             text-indent: 1em;
             font-family: arial, sans-serif; }
         .dark { font-weight: bold; }
+
+        header {
+            text-align: center;
+            font-size: xx-large;
+            background-color: darkcyan;
+            padding: 10px;
+        }
+        .nombre {
+            font-size: large;
+            font-family: cursive;
+            color: black;
+            text-indent: 0em;
+        }
+        .contenido {
+            padding-left: 10%;
+            padding-right: 10%
+        }
+        button {
+            padding: 5px;
+            color: white;
+            background-color: black;
+            font-size: 12pt;
+        }
+        button:hover{
+            background-color: grey;
+            color: black;
+        }
     </style>
 
 </head>
 <body>
-    <p>
-        Este ejemplo usa los estilos background-image, background-position y background-attachment para colocar el logotipo de <span class="dark">Deitel & Associates, Inc.</span> en la esquina inferior derecha de la p&aacute;gina. Observe que el logo permanece en la posici&oacute;n correcta cuando ajustamos el tama&ntilde;o de la ventana del navegador. El color de background-color llena los espacios donde no hay imagen.
-    </p>
+
+    <header>
+        Ejemplo 7<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+        <a href="/CSS3/Capitulo 4/Ejemplos/Ejemplo 6 - Posicionamiento relativo.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/CSS3/Capitulo 4/Ejemplos/Ejemplo 8 - Dimensiones del cuadro.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <p>
+            Este ejemplo usa los estilos background-image, background-position y background-attachment para colocar el logotipo de <span class="dark">Deitel & Associates, Inc.</span> en la esquina inferior derecha de la p&aacute;gina. Observe que el logo permanece en la posici&oacute;n correcta cuando ajustamos el tama&ntilde;o de la ventana del navegador. El color de background-color llena los espacios donde no hay imagen.
+        </p>
+    </div>
 </body>
 </html>

@@ -9,28 +9,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vinculaci&oacute;n de hojas de estilo externas</title>
+    
     <link rel="stylesheet" href="estilos.css" type="text/css">
+
+    <style type="text/css">
+        header {
+            text-align: center;
+            font-size: xx-large;
+            background-color: darkcyan;
+            padding: 10px;
+        }
+        .nombre {
+            font-size: large;
+            font-family: cursive;
+        }
+        .contenido {
+            padding-left: 10%;
+            padding-right: 10%
+        }
+        button {
+            padding: 5px;
+            color: white;
+            background-color: black;
+            font-size: 12pt;
+        }
+        button:hover{
+            background-color: grey;
+            color: black;
+        }
+        body { margin:auto; }
+    </style>
+
 </head>
 <body>
-    <h1>Lista de compras para el <em>lunes</em></h1>
 
-    <ul>
-        <li>Leche</li>
-        <li>
-            Pan
-            <ul>
-                <li>Pan blanco</li>
-                <li>Pan de centeno</li>
-                <li>Pan de trigo entero</li>
-            </ul>
-        </li>
-        <li>Zanahorias</li>
-        <li>Yogurt</li>
-        <li>Pizza <em>con champi&ntilde;ones</em></li>
-    </ul>
+    <header>
+        Ejemplo 4<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+        <a href="/CSS3/Capitulo 4/Ejemplos/Ejemplo 3 - Herencia hojas de estilo.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/CSS3/Capitulo 4/Ejemplos/Ejemplo 5 - Posicionamiento absoluto.html"><button type="submit">Siguiente</button></a>
+    </header>
 
-    <p>
-        <em>Ir a la</em> <a href="http://www.deitel.com" class="nodec">Tienda de abarrotes</a>
-    </p>
+    <div class="contenido">
+        <h1>Lista de compras para el <em>lunes</em></h1>
+
+        <ul>
+            <li>Leche</li>
+            <li>
+                Pan
+                <ul>
+                    <li>Pan blanco</li>
+                    <li>Pan de centeno</li>
+                    <li>Pan de trigo entero</li>
+                </ul>
+            </li>
+            <li>Zanahorias</li>
+            <li>Yogurt</li>
+            <li>Pizza <em>con champi&ntilde;ones</em></li>
+        </ul>
+
+        <p>
+            <em>Ir a la</em> <a href="http://www.deitel.com" class="nodec">Tienda de abarrotes</a>
+        </p>
+    </div>
 </body>
 </html>

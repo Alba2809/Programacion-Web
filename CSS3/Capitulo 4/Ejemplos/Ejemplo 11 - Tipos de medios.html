@@ -33,14 +33,54 @@
                 font-family: "times new roman", times, serif;
             }
         } /* Fin de la declaración @media print */
+
+        header {
+            text-align: center;
+            font-size: xx-large;
+            background-color: darkcyan;
+            padding: 10px;
+        }
+        .nombre {
+            font-size: large;
+            font-family: cursive;
+            color: black;
+        }
+        .contenido {
+            padding-left: 10%;
+            padding-right: 10%
+        }
+        button {
+            padding: 5px;
+            color: white;
+            background-color: black;
+            font-size: 12pt;
+        }
+        button:hover{
+            background-color: grey;
+            color: black;
+        }
+        body { margin:auto; }
     </style>
 
 </head>
 <body>
-    <h1>Ejemplo de tipos de medios de CSS</h1>
 
-    <p>
-        Este ejemplo usa tipos de medios de CSS para variar la forma en que aparece la p&aacute;gina impresa y c&oacute;mo aparece en cualquier otro medio. Este texto aparece con una fuente en la pantalla y con una fuente distinta en papel o en vista previa de impresi&oacute;n. Para ver la diferencia en Internet Explorer, vaya al men&uacute; Imprimir y seleccione Vista previa de impresi&oacute;n. En Firefox, seleccione vista preliminar del men&uacute; Imprimir.
-    </p>
+    <header>
+        Ejemplo 11<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+        <a href="/CSS3/Capitulo 4/Ejemplos/Ejemplo 10 - Elementos flotantes.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/CSS3/Capitulo 4/Ejemplos/Ejemplo 12 - Menu desplegable.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <h1>Ejemplo de tipos de medios de CSS</h1>
+
+        <p>
+            Este ejemplo usa tipos de medios de CSS para variar la forma en que aparece la p&aacute;gina impresa y c&oacute;mo aparece en cualquier otro medio. Este texto aparece con una fuente en la pantalla y con una fuente distinta en papel o en vista previa de impresi&oacute;n. Para ver la diferencia en Internet Explorer, vaya al men&uacute; Imprimir y seleccione Vista previa de impresi&oacute;n. En Firefox, seleccione vista preliminar del men&uacute; Imprimir.
+        </p>
+    </div>
 </body>
 </html>

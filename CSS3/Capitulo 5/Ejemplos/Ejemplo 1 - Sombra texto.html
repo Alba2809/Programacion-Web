@@ -1,21 +1,24 @@
 <!DOCTYPE html>
+
+<!-- Fig. 5.1: sombratexto.html -->
+<!-- Sombra de texto en CSS3 -->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 4.5</title>
+    <title>Sombra de texto</title>
 
     <style type="text/css">
-        h1, h2 {
-            padding: 0.5em;
-            border-style: dashed;
-            margin: 0.5em;
+        h1 {
+            text-shadow: -4px 4px 6px dimgrey; /* Agrega sombra */
+            font-size: 400%; /* Aumenta el tamaño de la fuente */
         }
 
-        /* Estilo de la página estandar */
-        .headerE {
+        header {
             text-align: center;
+            text-shadow: -4px 4px 6px rgb(18, 90, 0);
             font-size: xx-large;
             background-color: darkcyan;
             padding: 10px;
@@ -33,6 +36,7 @@
             color: white;
             background-color: black;
             font-size: 12pt;
+            border-radius: 10px;
         }
         button:hover{
             background-color: grey;
@@ -43,33 +47,18 @@
 
 </head>
 <body>
-    <header class="headerE">
-        Ejercicio 4.5 <br>
+
+    <header>
+        Ejemplo 1<br>
         <p class="nombre">
             Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
         </p>
-        <a href="/CSS3/Capitulo 4/Ejercicios/Ejercicio 4-4.html"><button type="submit">Atras</button></a>
         <a href="/index.html"><button type="submit">Principal</button></a>
-        <a href="/CSS3/Capitulo 4/Ejercicios/Ejercicio 4-6.html"><button type="submit">Siguiente</button></a>
+        <a href="/CSS3/Capitulo 5/Ejemplos/Ejemplo 2 - Esquinas redondas.html"><button type="submit">Siguiente</button></a>
     </header>
 
     <div class="contenido">
-        <h1>
-            4.5 Escriba una regla de CSS que proporcione a todos los elementos <em>h1</em> y <em>h2</em> un relleno de 0.5 <em>ems</em>, un estilo de borde <em>dashed</em> y un margen de 0.5 <em>ems</em>.
-            <hr>
-            Este es un elemento <em>h1</em>.
-        </h1>
-    
-        <h2>
-            Propiedades cambiadas:
-            <ul>
-                <li><em>padding: 0.5em</em></li>
-                <li><em>border-style: dashed</em></li>
-                <li><em>margin: 0.5em</em></li>
-            </ul>
-            <hr>
-            Este es un elemento <em>h2</em>.
-        </h2>
+        <h1>Sombra de texto</h1>
     </div>
 </body>
 </html>

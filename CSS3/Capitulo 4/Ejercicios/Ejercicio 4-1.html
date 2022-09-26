@@ -14,43 +14,79 @@
         p {
             font-size: 15pt;
         }
+
+        /* Estilo de la página estandar */
+        .headerE {
+            text-align: center;
+            font-size: xx-large;
+            background-color: darkcyan;
+            padding: 10px;
+        }
+        .nombre {
+            font-size: large;
+            font-family: cursive;
+        }
+        .contenido {
+            padding-left: 10%;
+            padding-right: 10%
+        }
+        button {
+            padding: 5px;
+            color: white;
+            background-color: black;
+            font-size: 12pt;
+        }
+        button:hover{
+            background-color: grey;
+            color: black;
+        }
+        body { margin:auto; }
     </style>
 </head>
 <body>
 
-    <hr>
+    <header class="headerE">
+        Ejercicio 4.1 <br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/CSS3/Capitulo 4/Ejercicios/Ejercicio 4-2.html"><button type="submit">Siguiente</button></a>
+    </header>
 
-    <h1>
-        4.1 Suponga que el tamaño de la fuente base en un sistema es de 12 puntos.
-    </h1>
-
-    <ol type="a">
-        <!-- a) -->
-        <li>
-            ¿Qu&eacute; tan grande es una fuente de 36 puntos en <em>em</em>?
-        </li>
-        <p>3 ems.</p>
-        <!-- b) -->
-        <li>
-            ¿Qu&eacute; tan grande es una fuente 9 puntos en <em>em</em>?
-        </li>
-        <p>0.75 ems.</p>
-        <!-- c) -->
-        <li>
-            ¿Qu&eacute; tan grande es una fuente de 24 puntos en picas?
-        </li>
-        <p>2 picas.</p>
-        <!-- d) -->
-        <li>
-            ¿Qu&eacute; tan grande es una fuente de 12 puntos en pulgadas?
-        </li>
-        <p>1/6 pulgada.</p>
-        <!-- e) -->
-        <li>
-            ¿Qu&eacute; tan grande es una fuente de 1 pulgada en picas?
-        </li>
-        <p>6 picas.</p>
-    </ol>
+    <div class="contenido">
+        <h1>
+            4.1 Suponga que el tamaño de la fuente base en un sistema es de 12 puntos.
+        </h1>
+    
+        <ol type="a">
+            <!-- a) -->
+            <li>
+                ¿Qu&eacute; tan grande es una fuente de 36 puntos en <em>em</em>?
+            </li>
+            <p>3 ems.</p>
+            <!-- b) -->
+            <li>
+                ¿Qu&eacute; tan grande es una fuente 9 puntos en <em>em</em>?
+            </li>
+            <p>0.75 ems.</p>
+            <!-- c) -->
+            <li>
+                ¿Qu&eacute; tan grande es una fuente de 24 puntos en picas?
+            </li>
+            <p>2 picas.</p>
+            <!-- d) -->
+            <li>
+                ¿Qu&eacute; tan grande es una fuente de 12 puntos en pulgadas?
+            </li>
+            <p>1/6 pulgada.</p>
+            <!-- e) -->
+            <li>
+                ¿Qu&eacute; tan grande es una fuente de 1 pulgada en picas?
+            </li>
+            <p>6 picas.</p>
+        </ol>
+    </div>
 
 </body>
 </html>
