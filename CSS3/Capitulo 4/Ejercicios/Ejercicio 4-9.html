@@ -14,25 +14,67 @@
             border-style: double;
             width: 100%;
         }
+        header {
+            text-align: center;
+            font-size: xx-large;
+            background-color: darkcyan;
+            padding: 10px;
+        }
+        .nombre {
+            font-size: large;
+            font-family: cursive;
+        }
+        .contenido {
+            padding-left: 10%;
+            padding-right: 10%
+        }
+        button {
+            padding: 5px;
+            color: white;
+            background-color: black;
+            font-size: 12pt;
+        }
+        body {
+            margin:auto;
+        }
     </style>
 </head>
 <body>
-    <div>
-        <nav>Navegaci&oacute;n
-            <ul>
-                <li><a href="http://jigsaw.w3.org/css-validator/">Validaci&oacute;n</a></li>
-            </ul>
-        </nav>
+
+    <header>
+        Ejercicio 4.9 <br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+        <a href="/CSS3/Capitulo 4/Ejercicios/Ejercicio 4-8.html">
+            <button type="submit">Atras</button>
+        </a>
+        <a href="/index.html">
+            <button type="submit">Principal</button>
+        </a>
+    </header>
+
+    <div class="contenido">
+        <h1>
+            4.9 Cree un bot&oacute;n de navegaci&oacute;n mediante un elemento <em>div</em> con un v&iacute;nculo en su interior. As&iacute;ngele un borde, fondo y color de texto, y haga que cambien cuando el usuario pase el rat&oacute;n sobre el bot&oacute;n. Use una hoja de estilo externa. Aseg&uacute;rese de que su hoja de estilos se valide en <em>http://jigsaw.w3.org/css-validator/</em>. Tenga en cuenta que algunas advertenciias tal vez no puuedan evitarse, pero su CSS no deberá tener errores.
+        </h1>
+    
+        <hr>
+        
+        <div>
+            <nav>Navegaci&oacute;n
+                <ul>
+                    <li><a href="http://jigsaw.w3.org/css-validator/">Validaci&oacute;n</a></li>
+                    <li>Opci&oacute;n 2</li>
+                </ul>
+            </nav>
+        </div>
+    
+        <h2>
+            Captura de la validaci&oacute;n del archivo CSS:
+        </h2>
+    
+        <img src="/CSS3/Capitulo 4/Ejercicios/Imagenes/validacion-css.PNG" alt="Validación del archivo CSS">
     </div>
-
-    <h1>
-        4.9 Cree un bot&oacute;n de navegaci&oacute;n mediante un elemento <em>div</em> con un v&iacute;nculo en su interior. As&iacute;ngele un borde, fondo y color de texto, y haga que cambien cuando el usuario pase el rat&oacute;n sobre el bot&oacute;n. Use una hoja de estilo externa. Aseg&uacute;rese de que su hoja de estilos se valide en <em>http://jigsaw.w3.org/css-validator/</em>. Tenga en cuenta que algunas advertenciias tal vez no puuedan evitarse, pero su CSS no deberá tener errores.
-    </h1>
-
-    <h2>
-        Captura de la validaci&oacute;n del archivo CSS:
-    </h2>
-
-    <img src="/CSS3/Capitulo 4/Ejercicios/Imagenes/validacion-css.PNG" alt="Validación del archivo CSS">
 </body>
 </html>
