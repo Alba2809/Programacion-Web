@@ -1,35 +1,27 @@
 <!DOCTYPE html>
 
-<!-- Fig. 5.2: esquinas redondeadas.html -->
-<!-- Uso de border-radius para agregar esquinas redoondeadas a dos elementos. -->
+<!-- Fig. 5.6: gradienteradial.html -->
+<!-- Gradientes radiales en CSS3 -->
 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esquinas redondeadas</title>
+    <title>Gradiente radial</title>
 
     <style type="text/css">
         div {
-            border: 3px solid navy;
-            padding: 5px 20px;
-            background: lightcyan;
             width: 200px;
+            height: 200px;
+            padding: 5px;
             text-align: center;
-            border-radius: 15px; /* agrega esquinas redondeadas */
-            margin-bottom: 20px;
-        }
-        #redonda2 {
-            border: 3px solid navy;
-            padding: 5px 20px;
-            background: lightcyan;
-            width: 200px;
-            text-align: center;
-            border-radius: 50px; /* aumenta border-radius */
+            background: -webkit-radial-gradient(center, yellow, red);
+            background: -moz-radial-gradient(center, yellow, red);
+            background: radial-gradient(center, yellow, red);
         }
 
-
+        /*  */
         header {
             text-align: center;
             text-shadow: -4px 4px 6px rgb(18, 90, 0);
@@ -58,26 +50,19 @@
         }
         body { margin:auto; }
     </style>
-
 </head>
 <body>
     <header>
-        Ejemplo 2<br>
+        Ejemplo 5<br>
         <p class="nombre">
             Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
         </p>
-        <a href="/CSS3/Capitulo 5/Ejemplos/Ejemplo 1 - Sombra texto.html"><button type="submit">Atras</button></a>
+        <a href="/CSS3/Capitulo 5/Ejemplos/Ejemplo 4 - Gradiente lineal.html"><button type="submit">Atras</button></a>
         <a href="/index.html"><button type="submit">Principal</button></a>
-        <a href="/CSS3/Capitulo 5/Ejemplos/Ejemplo 3 - Sombra caja.html"><button type="submit">Siguiente</button></a>
+        <a href="/CSS3/Capitulo 5/Ejemplos/Ejemplo 6 - Trazo de texto.html"><button type="submit">Siguiente</button></a>
     </header>
+    <br>
+    <div><h2>Gradiente radial</h2></div>
 
-    <span class="contenido">
-        <div>
-            La propiedad <em>border-radius</em> agrega esquinas redondeadas a un elemento.
-        </div>
-        <div id="redonda2">
-            Al aumentar el valor de <em>border-radius</em> se redondean a&uacute;n m&aacute;s las esquinas del elemento.
-        </div>
-    </span>
 </body>
 </html>

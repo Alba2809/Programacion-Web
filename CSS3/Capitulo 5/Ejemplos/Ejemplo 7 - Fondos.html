@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<!-- Fig. 5.8: multiplesfondos.html -->
+<!-- Múltiples imágenes de fondo en CSS3 -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M&uacute;ltiples fondos</title>
+
+    <style type="text/css">
+        div.fondo {
+            background: url(/CSS3/Capitulo\ 5/Imagenes/deitel.png), url(/CSS3/Capitulo\ 5/Imagenes/oceano.jpg);
+            background-position: bottom right, 100% center;
+            background-origin: border-box, content-box;
+            background-repeat: no-repeat, repeat;
+        }
+        div.contenido {
+            padding: 10px 15px;
+            color: white;
+            font-size: 150%;
+        }
+
+	    /*  */
+        header {
+            text-align: center;
+            text-shadow: -4px 4px 6px rgb(18, 90, 0);
+            font-size: xx-large;
+            background-color: darkcyan;
+            padding: 10px;
+        }
+        .nombre {
+            font-size: large;
+            font-family: cursive;
+        }
+        button {
+            padding: 5px;
+            color: white;
+            background-color: black;
+            font-size: 12pt;
+            border-radius: 10px;
+        }
+        button:hover{
+            background-color: grey;
+            color: black;
+        }
+        body { margin:auto; }
+    </style>
+</head>
+<body>
+    <header>
+        Ejemplo 7<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+        <a href="/CSS3/Capitulo 5/Ejemplos/Ejemplo 6 - Trazo de texto.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/CSS3/Capitulo 5/Ejemplos"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="fondo">
+        <div class="contenido">
+            <p>
+                Deitel & Associates, Inc. es una empresa reconocida a nivel mundial, dedicada al entrenamiento corporativo y la creaci&oacute;n de contenido. La empresa ofrece cursos impartidos por instructores en los sitios de los cliente en todo el mundo sobre lenguajes de programaci&oacute;n y otros temas de software como C++, Visual C++<sup>;</sup>, C, Java&trade;, C#<sup>&reg;</sup>, Visual Basic<sup>&reg;</sup>, Objective-C<sup>&reg;</sup>, XML<sup>&reg;</sup>, Python<sup>&reg;</sup>, JavaScript, tecnolog&iacute;a de objetos, programaci&oacute;n en Internet y Web, y desarrollo de aplicaciones para Android y iPhone.
+                <br><br><br><br><br><br><br><br><br><br><br><br>
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

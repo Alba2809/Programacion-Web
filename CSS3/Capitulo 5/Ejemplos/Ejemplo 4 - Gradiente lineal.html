@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<!-- Fig. 5.4: gradientelineal.html -->
+<!-- Gradientes lineales en CSS3 -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradiente lineal</title>
+
+    <style type="text/css">
+        div {
+            width: 200px;
+            height: 200px;
+            border: 3px solid navy;
+            padding: 5px 20px;
+            text-align: center;
+            background:-webkit-gradient(linear, center top, center bottom, color-stop(15%,white), color-stop(50%,lightsteelblue),color-stop(75%,navy));
+            background: -moz-linear-gradient(top center, white 15%, lightsteelblue 50%, navy 75%);
+            background: linear-gradient(top, white 15%, lightsteelblue 50%, navy 75%);
+            float: left;
+            margin-right: 15px;
+        }
+        #horizontal {
+            width: 200px;
+            height: 200px;
+            border: 3px solid orange;
+            padding: 5px 20px;
+            text-align: center;
+            background: -webkit-gradient(linear, left top, right top, color-stop(15%, white), color-stop(50%, yellow), color-stop(75%, orange));
+            background: -moz-linear-gradient(left, white 15%, yellow 50%, orange 75%);
+            background: linear-gradient(left, white 15%, yellow 50%, orange 75%);
+            margin-right: 15px;
+        }
+        #diagonal {
+            width: 200px;
+            height: 200px;
+            border: 3px solid purple;
+            padding: 5px 20px;
+            text-align: center;
+            background: -webkit-gradient(linear, left top, right bottom, color-stop(15%, white), color-stop(50%, plum), color-stop(75%, purple));
+            background: -moz-linear-gradient(top left, white 15%, plum 50%, purple 75%);
+            background: linear-gradient(135deg, white 15%, plum 50%, purple 75%);
+        }
+
+        /*  */
+        header {
+            text-align: center;
+            text-shadow: -4px 4px 6px rgb(18, 90, 0);
+            font-size: xx-large;
+            background-color: darkcyan;
+            padding: 10px;
+        }
+        .nombre {
+            font-size: large;
+            font-family: cursive;
+        }
+        .contenido {
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+        button {
+            padding: 5px;
+            color: white;
+            background-color: black;
+            font-size: 12pt;
+            border-radius: 10px;
+        }
+        button:hover{
+            background-color: grey;
+            color: black;
+        }
+        body { margin:auto; }
+    </style>
+</head>
+<body>
+    <header>
+        Ejemplo 4<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+        <a href="/CSS3/Capitulo 5/Ejemplos/Ejemplo 3 - Sombra caja.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/CSS3/Capitulo 5/Ejemplos/Ejemplo 5 - Gradiente radial.html"><button type="submit">Siguiente</button></a>
+    </header>
+    <br>
+    <div><h2>Gradiente lineal vertical</h2></div>
+    <div id="horizontal"><h2>Gradiente lineal horizontal</h2></div>
+    <div id="diagonal"><h2>Gradiente lineal diagonal</h2></div>
+    
+</body>
+</html>
