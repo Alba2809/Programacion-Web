@@ -53,3 +53,20 @@ body { margin:auto; }
     font-style: italic;
 }
 .oracion { font-size: 15pt; }
+.respuesta { 
+    font-size: 12pt; 
+    /*  */
+    -webkit-transition: -webkit-transform 1.5s;
+    -moz-transition: -webkit-transform 1.5s;
+    -o-transition: -webkit-transform 1.5s;
+    transition: -webkit-transform 1.5s;
+}
+.oracion:hover p.respuesta {
+    /*  */
+    -webkit-transform: scale(1.2, 1.2);
+    -moz-transform: scale(1.2, 1.2);
+    -o-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
+}
+.verdadero { color: green; font-style: italic; }
+.falso { color: red; font-style: italic; }
