@@ -61,7 +61,7 @@ body { margin:auto; }
     -o-transition: -webkit-transform 1.5s;
     transition: -webkit-transform 1.5s;
 }
-.oracion:hover p.respuesta {
+.oracion:hover p.respuesta:last-child {
     /*  */
     -webkit-transform: scale(1.2, 1.2);
     -moz-transform: scale(1.2, 1.2);
