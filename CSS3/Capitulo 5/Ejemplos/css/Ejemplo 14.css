@@ -1,0 +1,9 @@
+@media screen {
+    @font-face {
+        font-family: 'Calligraffitti';
+        font-style: normal;
+        font-weight: normal;
+        src: local('Calligraffiti'),
+            url('http://themes.googleusercontent.com/static/fonts/callgraffitti/vl/vLVN2Y-z65rVu1R7lWdvyKIZAuDcNtpCWuPSaIROIe8.woff') format('woff');
+    }
+}

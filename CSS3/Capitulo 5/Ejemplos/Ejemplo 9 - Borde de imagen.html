@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<!-- Fig. 5.10: bordeimagen.html -->
+<!-- Estirar y repetir una imagen para crear un borde. -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borde de imagenn</title>
+
+    <style type="text/css">
+        div {
+            border-width: 30px;
+            border-style: solid;
+            width: 234px;
+            padding: 20px 20px;
+        }
+        #stretch {
+            -webkit-border-image: url(/CSS3/Capitulo\ 5/Imagenes/borde.png) 80 80 80 80 stretch;
+            -moz-border-image: url(/CSS3/Capitulo\ 5/Imagenes/borde.png) 80 80 80 80 stretch;
+            -o-border-image: url(/CSS3/Capitulo\ 5/Imagenes/borde.png) 80 80 80 80 stretch;
+            border-image: url(/CSS3/Capitulo\ 5/Imagenes/borde.png) 80 80 80 80 stretch;
+        }
+        #repeat {
+            -webkit-border-image: url(/CSS3/Capitulo\ 5/Imagenes/borde.png) 34% 34% repeat;
+            -moz-border-image: url(/CSS3/Capitulo\ 5/Imagenes/borde.png) 34% 34% repeat;
+            -o-border-image: url(/CSS3/Capitulo\ 5/Imagenes/borde.png) 34% 34% repeat;
+            border-image: url(/CSS3/Capitulo\ 5/Imagenes/borde.png) 34% 34% repeat;
+        }
+
+	    /*  */
+        header {
+            text-align: center;
+            text-shadow: -4px 4px 6px rgb(18, 90, 0);
+            font-size: xx-large;
+            background-color: darkcyan;
+            padding: 10px;
+        }
+        .nombre {
+            font-size: large;
+            font-family: cursive;
+        }
+        .contenido {
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+        button {
+            padding: 5px;
+            color: white;
+            background-color: black;
+            font-size: 12pt;
+            border-radius: 10px;
+        }
+        button:hover{
+            background-color: grey;
+            color: black;
+        }
+        body { margin:auto; }
+    </style>
+</head>
+<body>
+    <header>
+        Ejemplo 9<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+        <a href="/CSS3/Capitulo 5/Ejemplos/Ejemplo 8 - Reflejo.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/CSS3/Capitulo 5/Ejemplos/Ejemplo 10 - Animacion.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    
+    <h2>Bordes de imagen</h2>
+    <img src="/CSS3/Capitulo 5/Imagenes/borde.png" alt="Imagen utilizada para demostrar los bordes" width="25%" height="25%">
+    <p><div id="stretch">Se estira el borde de la imagen</div></p>
+    <p><div id="repeat">Se repite el borde de la imagen</div></p>
+    
+
+</body>
+</html>

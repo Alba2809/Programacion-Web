@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<!-- Fig. 5.15: fuentesincrustadas.html -->
+<!-- Incrustación de fuentes para usar en páginas Web. -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuentes incrustadas</title>
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Calligraffitti" type="text/css">
+
+    <style type="text/css">
+        body {
+            font-family: "Calligraffitti";
+            font-size: 48px;
+            text-shadow: 3px 3px 3px dimgrey;
+            margin:auto;
+        }
+
+	    /*  */
+        header {
+            text-align: center;
+            text-shadow: -4px 4px 6px rgb(18, 90, 0);
+            font-size: xx-large;
+            background-color: darkcyan;
+            padding: 10px;
+        }
+        .nombre {
+            font-size: large;
+            font-family: cursive;
+        }
+        .contenido {
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+        button {
+            padding: 5px;
+            color: white;
+            background-color: black;
+            font-size: 12pt;
+            border-radius: 10px;
+
+            /*  */
+            -webkit-transition: -webkit-transform 1.5s;
+            -moz-transition: -webkit-transform 1.5s;
+            -o-transition: -webkit-transform 1.5s;
+            transition: -webkit-transform 1.5s;
+        }
+        button:hover{
+            background-color: grey;
+            color: black;
+
+            /*  */
+            -webkit-transform: scale(1.25, 1.25);
+            -moz-transform: scale(1.25, 1.25);
+            -o-transform: scale(1.25, 1.25);
+            transform: scale(1.25, 1.25);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Ejemplo 14<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+        <a href="/CSS3/Capitulo 5/Ejemplos/Ejemplo 13 - Fusion imagen.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/CSS3/Capitulo 5/Ejemplos/Ejemplo 15 - Caja flexible.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <b>Incrustando la fuente Web de Google "Calligraffitti"</b>
+    </div>
+
+</body>
+</html>
