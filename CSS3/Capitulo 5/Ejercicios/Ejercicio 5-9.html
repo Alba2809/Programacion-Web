@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5.9</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+    <style type="text/css">
+        img {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            -webkit-animation: movingimage linear 10s 1s infinite;
+            -moz-animation: movingimage linear 10s 1s infinite;
+            animation: movingimage linear 10s 1s infinite;
+        }
+        @-webkit-keyframes movingimage {
+            0% { opacity: 1; left: 0px; top: 0px; }
+            20% { opacity: 1; left: -50px; top: 0px; }
+            40% { opacity: 1; left: -50px; top: 100px; }
+            60% { opacity: 1; left: 100px; top: 100px; }
+            80% { opacity: 1; left: 100px; top: 0px; }
+            100% { opacity: 1; left: 0px; top: 0px; }
+        }
+        @-moz-keyframes movingimage {
+            0% { opacity: 1; left: 0px; top: 0px; }
+            20% { opacity: 1; left: -50px; top: 0px; }
+            40% { opacity: 1; left: -50px; top: 100px; }
+            60% { opacity: 1; left: 100px; top: 100px; }
+            80% { opacity: 1; left: 100px; top: 0px; }
+            100% { opacity: 1; left: 0px; top: 0px; }
+        }
+        @keyframes movingimage {
+            0% { opacity: 1; left: 0px; top: 0px; }
+            20% { opacity: 1; left: -50px; top: 0px; }
+            40% { opacity: 1; left: -50px; top: 100px; }
+            60% { opacity: 1; left: 100px; top: 100px; }
+            80% { opacity: 1; left: 100px; top: 0px; }
+            100% { opacity: 1; left: 0px; top: 0px; }
+        }
+    </style>
+
+</head>
+<body>
+    <header class="headerP">
+        Ejercicio 5.9<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/CSS3/Capitulo 5/Ejercicios/Ejercicio 5-8.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/CSS3/Capitulo 5/Ejercicios/Ejercicio 5-10.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <h3>
+            <em>(Animaci&oacute;n)</em> Cree una animaci&oacute;n infinita de un elemento que se mueva en un patrón cuadrado.
+        </h3>
+        <br>
+        <center>
+            <img src="/CSS3/Capitulo 5/Imagenes/pikachu.png" alt="Pikachu con animaci&oacute;n">
+        </center>
+    </div>
+</body>
+</html>

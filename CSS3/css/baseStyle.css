@@ -70,3 +70,10 @@ body { margin:auto; }
 }
 .verdadero { color: green; font-style: italic; }
 .falso { color: red; font-style: italic; }
+
+h3 {
+    text-align: center;
+    background-color: rgb(241, 230, 216);
+    border-radius: 10px;
+    padding: 10px;
+}

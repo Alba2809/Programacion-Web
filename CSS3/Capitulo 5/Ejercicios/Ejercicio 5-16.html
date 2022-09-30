@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5.16</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+    <style type="text/css">
+        p { margin: 0.9em 0em; }
+        .div1 { margin-left: 20px; margin-right: 20px; }
+        /* estilos para smartphones con anchuras de pantalla de 480px o menos */
+        @media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 480px) {
+            .div1 {
+                -webkit-column-count: 1;
+                column-count: 1;
+            }
+        }
+        /* @media only screen and (min-width: 480px) and (max-width: 480px) {
+            .div1 {
+                -webkit-column-count: 1;
+                column-count: 1;
+            }
+        } */
+        /* estilos para dispositivos con anchuras de pantalla de 481px a 1024px */
+        @media only screen and (min-width: 481px) and (max-width: 1024px) {
+            .div1 {
+                -webkit-column-count: 2;
+                column-count: 2;
+                -webkit-column-gap: 30px;
+                column-gap: 30px;
+                -webkit-column-rule: 1px outset black;
+                column-rule: 1px outset black;
+            }
+        }
+        /* estilos para dispositivos con anchuras de pantalla de 1025px o mayor */
+        @media only screen and (min-width: 1025px) {
+            .div1 {
+                -webkit-column-count: 3;
+                column-count: 3;
+                -webkit-column-gap: 30px;
+                column-gap: 30px;
+                -webkit-column-rule: 1px outset black;
+                column-rule: 1px outset black;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <header class="headerP">
+        Ejercicio 5.16<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/CSS3/Capitulo 5/Ejercicios/Ejercicio 5-15.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+    </header>
+
+    <div class="contenido">
+        <h3>
+            <em>(Consultas de medios)</em> Cree su propia p&aacute;gina Web multicolumna y use consultas de medios para ajustar el formato y usar una columna para dispositivos m&oacute;viles que tengan una anchura m&aacute;xima de <em>480px</em>.
+        </h3>
+    </div>
+
+    <header>
+        <h1 style="margin-left: 20px;">Usar versi&oacute;n m&oacute;vil de cualquier p&aacute;gina Web</h1>
+    </header>
+    <div class="div1">
+        <p>
+            Lo primero que tienes que hacer es entrar a la p&aacute;gina cuya versi&oacute;n m&oacute;vil quieras visitar. Una vez est&eacute;s en ella, pulsa en el bot&oacute;n F12 de tu teclado para abrir la consola del navegador, la cual aparecer&aacute; ne la parte derecha de la pantalla.
+        </p>
+        <p>
+            En esta consola que tienes en la parte derecha de la pantalla, tienes que pulsar en un icono que tiene el dibujo de un m&oacute;vil y una tableta detr&aacute;s. Lo ver&aacute;s en la parte superior izquierda dentro de la propia consola, en la barra que hay justo arriba del todo.
+        </p>
+        <p>
+            Y ya est&aacute;. Cuando pulses en ese icono, acceder&aacute;s en el modo m&oacute;vil de la web que est&eacute;s visitando. Este modo m&oacute;vil se cerrar&aacute; en cuanto cierres la consola, pero te permitir&aacute; explorar diferentes resoluciones y formatos.
+            Una vez abierta la vista como m&oacute;vil de una p&aacute;gina web, en la parte superior de la pantalla tienes varias opciones. Si pulsas sobre Responsive vas a poder alternar entre una vista responsiva que reacciona al formato de pantalla que le apliques y la proporci&oacute;n y resoluci&oacute;n de m&oacute;viles concretos que puedes editar con el bot&oacute;n Edit para que aparezcan primero los que t&uacute; quieras.
+        </p>
+        <p>
+            Y cuando te hablo de modo responsivo, quiere decir que puedes manipular la resoluci&oacute;n a mano pulsando sobre las esquinas de la pantalla en la que est&aacute; enmarcada la p&aacute;gina web, o incluso sus laterales.
+            En la parte superior de la pantalla, tambi&eacute;n puedes escribir a mano la resoluci&oacute;n con la que quieras ver la web en su versi&oacute;n m&oacute;vil. Adem&aacute;s, tambi&eacute;n hay otro bot&oacute;n para manipular el zoom con el que aparece.
+            Y por &uacute;ltimo, si pulsas sobre el icono con el dibujo de la pantalla girando que aparece en la parte superior de la pantalla, alternar&aacute;s entre la vista vertical y horizontal m&oacute;vil a la hora de visualizar la web. Esto lo puedes combinar con el modo responsivo o con la resoluci&oacute;n preconfigurada de cualquier m&oacute;vil.
+        </p>
+        <footer>
+            <em>&copy; 2022 por Xataka. Todos los derechos reservados.</em>
+        </footer>
+    </div>
+</body>
+</html>
