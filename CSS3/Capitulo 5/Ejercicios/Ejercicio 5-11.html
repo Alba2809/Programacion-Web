@@ -9,17 +9,33 @@
     <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
 
     <style type="text/css">
-        #portada {
-            position: relative;
-            margin: 0 auto;
-        }
-        #portada img {
-            position: absolute;
-            left: 0;
+        #portada { position: relative; margin-left: 37%; }
+        #portada img { position: absolute; left: 0; }
+        #portada:hover .top1 { 
+            opacity: 0; 
             -webkit-transition: opacity 3s linear;
             transition: opacity 3s linear;
         }
-        #portada img.top:hover { opacity: 0; }
+        #portada:hover .top2 { 
+            opacity: 0; 
+            -webkit-transition: opacity 3s linear 3s;
+            transition: opacity 3s linear 3s;
+        }
+        #portada:hover .top3 { 
+            opacity: 0; 
+            -webkit-transition: opacity 3s linear 6s;
+            transition: opacity 3s linear 6s;
+        }
+        #portada:hover .top4 { 
+            opacity: 0; 
+            -webkit-transition: opacity 3s linear 9s;
+            transition: opacity 3s linear 9s;
+        }
+        #portada:hover .top5 { 
+            opacity: 0; 
+            -webkit-transition: opacity 3s linear 12s;
+            transition: opacity 3s linear 12s;
+        }
         
     </style>
 
@@ -41,11 +57,11 @@
         </h3>
 
         <div id="portada">
-            <img src="/CSS3/Capitulo 5/Imagenes/paisaje1.jpg" alt="Paisaje 1" class="top">
-            <img src="/CSS3/Capitulo 5/Imagenes/paisaje2.jpg" alt="Paisaje 2" class="top">
-            <img src="/CSS3/Capitulo 5/Imagenes/paisaje3.jpg" alt="Paisaje 3" class="top">
-            <img src="/CSS3/Capitulo 5/Imagenes/paisaje4.jpg" alt="Paisaje 4" class="top">
-            <img src="/CSS3/Capitulo 5/Imagenes/paisaje5.jpg" alt="Paisaje 5" class="top">
+            <img src="/CSS3/Capitulo 5/Imagenes/paisaje1.jpg" alt="Paisaje 1" class="top5">
+            <img src="/CSS3/Capitulo 5/Imagenes/paisaje2.jpg" alt="Paisaje 2" class="top4">
+            <img src="/CSS3/Capitulo 5/Imagenes/paisaje3.jpg" alt="Paisaje 3" class="top3">
+            <img src="/CSS3/Capitulo 5/Imagenes/paisaje4.jpg" alt="Paisaje 4" class="top2">
+            <img src="/CSS3/Capitulo 5/Imagenes/paisaje5.jpg" alt="Paisaje 5" class="top1">
         </div>
         
     </div>
