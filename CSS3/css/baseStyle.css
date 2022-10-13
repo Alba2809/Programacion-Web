@@ -63,10 +63,10 @@ body { margin:auto; }
 }
 .oracion:hover p.respuesta:last-child {
     /*  */
-    -webkit-transform: scale(1.2, 1.2);
-    -moz-transform: scale(1.2, 1.2);
-    -o-transform: scale(1.2, 1.2);
-    transform: scale(1.2, 1.2);
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
 }
 .verdadero { color: green; font-style: italic; }
 .falso { color: red; font-style: italic; }
@@ -76,4 +76,10 @@ h3 {
     background-color: rgb(241, 230, 216);
     border-radius: 10px;
     padding: 10px;
+}
+
+.boxContent {
+    background-color: rgb(200, 238, 213);
+    border-radius: 10px;
+    padding: 40px;
 }

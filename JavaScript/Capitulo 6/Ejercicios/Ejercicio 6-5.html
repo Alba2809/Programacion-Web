@@ -17,81 +17,104 @@
         </p>
 	<a href="/JavaScript/Capitulo 6/Ejercicios/Ejercicio 6-4.html"><button type="submit">Atras</button></a>
         <a href="/index.html"><button type="submit">Principal</button></a>
-        <a href="/JavaScript/Capitulo 6/Ejercicios"><button type="submit">Siguiente</button></a>
+        <a href="/JavaScript/Capitulo 6/Ejercicios/Ejercicio 6-6.html"><button type="submit">Siguiente</button></a>
     </header>
 
     <div class="contenido">
         <h3>
             Escriba una instrucci&oacute;n (o comentario) para realizar cada una de las siguientes tareas:
         </h3>
-        <ol type="a">
+        <ol type="a" class="boxContent">
             <div class="oracion">
                 <li>
                     Indique que una secuencia de comandos calcular&aacute; el producto de tres entero [<em>Sugerencia: use texto que ayude a documentar una secuencia de comandos</em>].
                 </li>
-                <p class="respuesta"></p>
+                <p class="respuesta">
+                    //Calculo del producto de tres n&uacute;meros enteros.
+                </p>
             </div>
             <div class="oracion">
                 <li>
                     Declare las variables <em>x, y, z</em> y <em>resultado</em>.
                 </li>
-                <p class="respuesta"></p>
+                <p class="respuesta">
+                    var x, y, z, resultado;
+                </p>
             </div>
             <div class="oracion">
                 <li>
                     Declare las variables <em>xVal, yVal y zVal</em>.
                 </li>
-                <p class="respuesta"></p>
+                <p class="respuesta">
+                    var xVal, yVal, zVal;
+                </p>
             </div>
             <div class="oracion">
                 <li>
                     Pida al usuario que introduzca el primer valor, lea el valor del usuario y almac&eacute;nelo en la variable <em>xVal</em>.
                 </li>
-                <p class="respuesta"></p>
+                <p class="respuesta">
+                    xVal = window.prompt("Introduzca el primer valor:");
+                </p>
             </div>
             <div class="oracion">
                 <li>
                     Pida al usuario que introduzca el segundo valor, lea el valor del usuario y almac&eacute;nelo en la variable <em>yVal</em>.
                 </li>
-                <p class="respuesta"></p>
+                <p class="respuesta">
+                    yVal = window.prompt("Introduzca el segundo valor:");
+                </p>
             </div>
             <div class="oracion">
                 <li>
                     Pida al usuario que introduzca el tercer valor, lea el valor del usuario y almac&eacute;nelo en la variable <em>zVal</em>.
                 </li>
-                <p class="respuesta"></p>
+                <p class="respuesta">
+                    zVal = window.prompt("Introduzca el tercer valor:");
+                </p>
             </div>
             <div class="oracion">
                 <li>
                     Convierta la cadena <em>xVal</em> en un entero y almacene el resultado en la variable x.
                 </li>
-                <p class="respuesta"></p>
+                <p class="respuesta">
+                    x = parseInt(xVal);
+                </p>
             </div>
             <div class="oracion">
                 <li>
                     Convierta la cadena <em>yVal</em> en un entero y almacene el resultado en la variable y.
                 </li>
-                <p class="respuesta"></p>
+                <p class="respuesta">
+                    y = parseInt(yVal);
+                </p>
             </div>
             <div class="oracion">
                 <li>
                     Convierta la cadena <em>zVal</em> en un entero y almacene el resultado en la variable z.
                 </li>
-                <p class="respuesta"></p>
+                <p class="respuesta">
+                    z = parseInt(zVal);
+                </p>
             </div>
             <div class="oracion">
                 <li>
                     Calcule el producto de los tres enteros contenidos en las variables <em>x, y</em> y <em>z</em>, y asigne el resultado a la variable <em>resultado</em>.
                 </li>
-                <p class="respuesta"></p>
+                <p class="respuesta">
+                    resultado = x * y * z;
+                </p>
             </div>
             <div class="oracion">
                 <li>
                     Escriba una l&iacute;nea de HTML5 que contenga la cadena <em>"El producto es"</em> seguida del valor de la variable <em>resultado</em>.
                 </li>
-                <p class="respuesta"></p>
+                <p class="respuesta">
+                    document.writeln("&lt;h3>El resultado es: " + resultado + "&lt;/h3>");
+                </p>
             </div>
         </ol>
+        
     </div>
 </body>
 </html>
