@@ -1,12 +1,44 @@
-.headerP {
+/* .headerP {
     text-align: center;
     text-shadow: -4px 4px 6px rgb(18, 90, 0);
     font-size: xx-large;
     background-color: darkcyan;
     padding: 10px;
+} */
+.headerP {
+    text-align: center;
+    text-shadow: -4px 4px 6px black;
+    color: white;
+    font-size: xx-large;
+    padding: 10px;
+    background: -webkit-gradient(linear, left top, right bottom, 
+        color-stop(14%, rgb(116, 0, 184)), 
+        color-stop(28%, rgb(105, 48, 195)), 
+        color-stop(42%, rgb(94, 96, 206)), 
+        color-stop(56%, rgb(83, 144, 217)), 
+        color-stop(70%, rgb(72, 191, 227)), 
+        color-stop(84%, rgb(100, 223, 223)), 
+        color-stop(98%, rgb(128, 255, 219)));
+    background: -moz-linear-gradient(top left, 
+        rgb(116, 0, 184) 14%, 
+        rgb(105, 48, 195) 28%, 
+        rgb(94, 96, 206) 42%, 
+        rgb(83, 144, 217) 56%, 
+        rgb(72, 191, 227) 70%, 
+        rgb(100, 223, 223) 84%, 
+        rgb(128, 255, 219) 98%);
+    background: linear-gradient(135deg, 
+        rgb(116, 0, 184) 14%, 
+        rgb(105, 48, 195) 28%, 
+        rgb(94, 96, 206) 42%, 
+        rgb(83, 144, 217) 56%, 
+        rgb(72, 191, 227) 70%, 
+        rgb(100, 223, 223) 84%, 
+        rgb(128, 255, 219) 98%);
 }
 .nombre {
-    color: black;
+    text-shadow: -4px 4px 6px black;
+    color: white;
     background-color: transparent;
     font-size: large;
     font-family: cursive;
@@ -73,13 +105,13 @@ body { margin:auto; }
 
 h3 {
     text-align: center;
-    background-color: rgb(241, 230, 216);
+    background-color: rgb(100, 223, 223);
     border-radius: 10px;
     padding: 10px;
 }
 
 .boxContent {
-    background-color: rgb(200, 238, 213);
+    background-color: rgb(174, 248, 236);
     border-radius: 10px;
     padding: 40px;
 }
