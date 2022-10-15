@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6.20</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+</head>
+<body>
+    <header class="headerP">
+        Ejercicio 6.20<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 6/Ejercicios/Ejercicio 6-19.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/JavaScript/Capitulo 6/Ejercicios/Ejercicio 6-21.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <h3>
+            Escriba una secuencia de comandos que lea cinco enteros, determine y produzca marcado que muestre los enteros menor y mayor en el grupo. Use s&oacute;lo t&eacute;cnicas de secuencias de comandos que aprendi&oacute; en este cap&iacute;tulo.
+        </h3>
+
+        <p class="boxContent">
+            var n1, n2, n3, n4, n5; <br><br>
+
+                n1 = window.prompt("Primer número: ", 0);<br>
+                n2 = window.prompt("Segundo número: ", 0);<br>
+                n3 = window.prompt("Tercer número: ", 0);<br>
+                n4 = window.prompt("Cuarto número: ", 0);<br>
+                n5 = window.prompt("Quinto número: ", 0);<br><br>
+
+                n1 = parseInt(n1);<br>
+                n2 = parseInt(n2);<br>
+                n3 = parseInt(n3);<br>
+                n4 = parseInt(n4);<br>
+                n5 = parseInt(n5);<br><br>
+
+                if((n1 > n2) && (n1 > n3) && (n1 > n4) && (n1 > n5)) { <br>
+                    &emsp;document.write(n1 + " es el número mayor.&lt;br>");<br>
+                } else if ((n2 > n1) && (n2 > n3) && (n2 > n4) && (n2 > n5)) {<br>
+                    &emsp;document.write(n2 + " es el número mayor.&lt;br>");<br>
+                } else if ((n3 > n1) && (n3 > n2) && (n3 > n4) && (n3 > n5)) {<br>
+                    &emsp;document.write(n3 + " es el número mayor.&lt;br>");<br>
+                } else if ((n4 > n1) && (n4 > n2) && (n4 > n3) && (n4 > n5)) {<br>
+                    &emsp;document.write(n4 + " es el número mayor.&lt;br>");<br>
+                } else {<br>
+                    &emsp;document.write(n5 + " es el número mayor.&lt;br>");<br>
+                } <br><br>
+
+                if((n1 < n2) && (n1 < n3) && (n1 < n4) && (n1 < n5)) {<br>
+                    &emsp;document.write(n1 + " es el número menor.&lt;br>");<br>
+                } else if ((n2 < n1) && (n2 < n3) && (n2 < n4) && (n2 < n5)) {<br>
+                    &emsp;document.write(n2 + " es el número menor.&lt;br>");<br>
+                } else if ((n3 < n1) && (n3 < n2) && (n3 < n4) && (n3 < n5)) {<br>
+                    &emsp;document.write(n3 + " es el número menor.&lt;br>");<br>
+                } else if ((n4 < n1) && (n4 < n2) && (n4 < n3) && (n4 < n5)) {<br>
+                    &emsp;document.write(n4 + " es el número menor.&lt;br>");<br>
+                } else {<br>
+                    &emsp;document.write(n5 + " es el número menor.&lt;br>");<br>
+                }
+        </p>
+
+        <h3>
+            <script>
+                var n1, n2, n3, n4, n5;
+
+                n1 = window.prompt("Primer número: ", 0);
+                n2 = window.prompt("Segundo número: ", 0);
+                n3 = window.prompt("Tercer número: ", 0);
+                n4 = window.prompt("Cuarto número: ", 0);
+                n5 = window.prompt("Quinto número: ", 0);
+
+                n1 = parseInt(n1);
+                n2 = parseInt(n2);
+                n3 = parseInt(n3);
+                n4 = parseInt(n4);
+                n5 = parseInt(n5);
+
+                if((n1 > n2) && (n1 > n3) && (n1 > n4) && (n1 > n5)) {
+                    document.write(n1 + " es el número mayor.<br>");
+                } else if ((n2 > n1) && (n2 > n3) && (n2 > n4) && (n2 > n5)) {
+                    document.write(n2 + " es el número mayor.<br>");
+                } else if ((n3 > n1) && (n3 > n2) && (n3 > n4) && (n3 > n5)) {
+                    document.write(n3 + " es el número mayor.<br>");
+                } else if ((n4 > n1) && (n4 > n2) && (n4 > n3) && (n4 > n5)) {
+                    document.write(n4 + " es el número mayor.<br>");
+                } else {
+                    document.write(n5 + " es el número mayor.<br>");
+                }
+
+                if((n1 < n2) && (n1 < n3) && (n1 < n4) && (n1 < n5)) {
+                    document.write(n1 + " es el número menor.<br>");
+                } else if ((n2 < n1) && (n2 < n3) && (n2 < n4) && (n2 < n5)) {
+                    document.write(n2 + " es el número menor.<br>");
+                } else if ((n3 < n1) && (n3 < n2) && (n3 < n4) && (n3 < n5)) {
+                    document.write(n3 + " es el número menor.<br>");
+                } else if ((n4 < n1) && (n4 < n2) && (n4 < n3) && (n4 < n5)) {
+                    document.write(n4 + " es el número menor.<br>");
+                } else {
+                    document.write(n5 + " es el número menor.<br>");
+                }
+            </script>
+        </h3>
+    </div>
+</body>
+</html>

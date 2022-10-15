@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6.23</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+</head>
+<body>
+    <header class="headerP">
+        Ejercicio 6.23<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 6/Ejercicios/Ejercicio 6-22.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/JavaScript/Capitulo 6/Ejercicios/Ejercicio 6-24.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <h3>
+            Escriba una secuencia de comandos que reciba tres n&uacute;meros, determine y produzca marcado que muestre la cantidad de n&uacute;meros negativos, positivos y ceros introducidos.
+        </h3>
+
+        <p class="boxContent">
+            var n = [], negativos = 0, positivos = 0, ceros = 0; <br><br>
+
+            n[0] = window.prompt("Primer número:", 0);<br>
+            n[1] = window.prompt("Segundo número:", 0);<br>
+            n[2] = window.prompt("Tercer número:", 0);<br><br>
+
+            (n[0] == "" || n[0] == null) ? n[0] = 0 : null;<br>
+            (n[1] == "" || n[1] == null) ? n[1] = 0 : null;<br>
+            (n[2] == "" || n[2] == null) ? n[2] = 0 : null;<br><br>
+
+            n[0] = parseInt(n[0]);<br>
+            n[1] = parseInt(n[1]);<br>
+            n[2] = parseInt(n[2]);<br><br>
+
+            for (var index = 0; index < 3; index++) {<br>
+                (n[index] < 0) ? negativos++ : null;<br>
+                (n[index] == 0) ? ceros++ : null;<br>
+                (n[index] > 0) ? positivos++ : null;<br><br>
+            } <br><br>
+            
+            document.write("Negativos: " + negativos + "&lt;br>");<br>
+            document.write("Positivos: " + positivos + "&lt;br>");<br>
+            document.write("Ceros: " + ceros);
+        </p>
+
+        <h3>
+            <script>
+                var n = [], negativos = 0, positivos = 0, ceros = 0;
+
+                n[0] = window.prompt("Primer número:", 0);
+                n[1] = window.prompt("Segundo número:", 0);
+                n[2] = window.prompt("Tercer número:", 0);
+
+                (n[0] == "" || n[0] == null) ? n[0] = 0 : null;
+                (n[1] == "" || n[1] == null) ? n[1] = 0 : null;
+                (n[2] == "" || n[2] == null) ? n[2] = 0 : null;
+
+                n[0] = parseInt(n[0]);
+                n[1] = parseInt(n[1]);
+                n[2] = parseInt(n[2]);
+
+                for (var index = 0; index < 3; index++) {
+                    (n[index] < 0) ? negativos++ : null;
+                    (n[index] == 0) ? ceros++ : null;
+                    (n[index] > 0) ? positivos++ : null;
+                }
+
+                document.write("Negativos: " + negativos + "<br>");
+                document.write("Positivos: " + positivos + "<br>");
+                document.write("Ceros: " + ceros);
+            </script>
+        </h3>
+    </div>
+</body>
+</html>

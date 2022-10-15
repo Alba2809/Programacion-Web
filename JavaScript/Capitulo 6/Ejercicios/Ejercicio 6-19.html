@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6.19</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+</head>
+<body>
+    <header class="headerP">
+        Ejercicio 6.19<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 6/Ejercicios/Ejercicio 6-18.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/JavaScript/Capitulo 6/Ejercicios/Ejercicio 6-20.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <h3>
+            Escriba una secuencia de comandos que obtenga del usuario el radio de un c&iacute;rculo  y produzca texto de HTML5 que muestre el di&aacute;metro, la circunferencia y el &aacute;rea de ese c&iacute;rculo. Use el valor constante <em>3.14159</em> para &pi;. [<em>Nota:</em> tambi&eacute;n puede usar la constante predefinida <em>Math.PI</em> para el valor de &pi;. Esta constante es m&aacute;s precisa que el valor <em>3.14159</em>. El objeto <em>Math</em> est&aacute; definido por JavaScript y provee muchas herramientas matem&aacute;ticas comunes]. Use las siguientes f&oacute;rmulas (r es el radio): <em>di&aacute;metro = 2r, circunferencia = 2&pi;r, &aacute;rea = &pi;r<sup>2</sup></em>.
+        </h3>
+        
+        <p class="boxContent">
+            var r = window.prompt("Escriba el radio: ", 0); <br><br>
+    
+            (r == "" || r == null) ? r = 0 : null;<br><br>
+
+            r = parseFloat(r);<br><br>
+
+            var diametro = 2 * r;<br><br>
+            var circunferencia = 2 * Math.PI * r;<br><br>
+            var area = Math.PI * (r * r);<br><br>
+
+            document.write("Diámetro = " + diametro + "&lt;br>");<br><br>
+            document.write("Circunferencia = " + circunferencia + "&lt;br>");<br><br>
+            document.write("Área = "+ area + "&lt;br>");
+        </p>
+
+        <h3>
+            <script>
+                
+                var r = window.prompt("Escriba el radio: ", 0);
+    
+                (r == "" || r == null) ? r = 0 : null;
+    
+                r = parseFloat(r);
+    
+                var diametro = 2 * r;
+                var circunferencia = 2 * Math.PI * r;
+                var area = Math.PI * (r * r);
+    
+                document.write("Diámetro = " + diametro + "<br>");
+                document.write("Circunferencia = " + circunferencia + "<br>");
+                document.write("Área = "+ area + "<br>");
+    
+            </script>
+        </h3>
+    </div>
+</body>
+</html>

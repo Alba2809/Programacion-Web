@@ -88,10 +88,10 @@ body { margin:auto; }
 .respuesta { 
     font-size: 12pt; 
     /*  */
-    -webkit-transition: -webkit-transform 1.5s;
-    -moz-transition: -webkit-transform 1.5s;
-    -o-transition: -webkit-transform 1.5s;
-    transition: -webkit-transform 1.5s;
+    -webkit-transition: -webkit-transform 0.5s;
+    -moz-transition: -webkit-transform 0.5s;
+    -o-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
 }
 .oracion:hover p.respuesta:last-child {
     /*  */

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6.24</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+</head>
+<body>
+    <header class="headerP">
+        Ejercicio 6.24<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 6/Ejercicios/Ejercicio 6-23.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+    </header>
+
+    <div class="contenido">
+        <h3>
+            Escriba una secuencia de comandos que calcule los cuadrados y cubos de los n&uacute;meros del 0 al 5 y produzca texto de HTML5 que muestre los valores resultantes en un formato de tabla de HTML5, como se muestra a continuaci&oacute;n. [<em>Nota</em>: esta secuencia de comandos no requiere entrada del usuario].
+        </h3>
+        
+        <div class="boxContent">
+            document.write("&lt;table border='1' style='text-align: center; width: 350px;'>");<br>
+            document.write("&lt;thead>");<br>
+            document.write("&lt;tr>");<br>
+            document.write("&lt;th>número&lt;/th>&lt;th>cuadrado&lt;/th>&lt;th>cubo&lt;/th>");<br>
+            document.write("&lt;/tr>");<br>
+            document.write("&lt;/thead>");<br>
+            document.write("&lt;tbody>");<br><br>
+            
+            for (let index = 0; index < 6; index++) {<br>
+                document.write("&lt;tr>");<br>
+                document.write("&lt;td>" + index + "&lt;/td>");<br>
+                document.write("&lt;td>" + (index * index) + "&lt;/td>");<br>
+                document.write("&lt;td>" + (index * index * index) + "&lt;/td>");<br>
+                document.write("&lt;/tr>");<br>
+            } <br><br>
+            
+            document.write("&lt;/tbody>");<br>
+            document.write("&lt;/table>");<br>
+        </div>
+<table border="1" style="text-align: center;table-layout: fixed;"></table>
+        <h3>
+            <center>
+                <script>
+                    document.write("<table border='1' style='text-align: center; width: 350px;'>");
+                    document.write("<thead>");
+                    document.write("<tr>");
+                    document.write("<th>número</th><th>cuadrado</th><th>cubo</th>");
+                    document.write("</tr>");
+                    document.write("</thead>");
+                    document.write("<tbody>");
+                    
+                    for (let index = 0; index < 6; index++) {
+                        document.write("<tr>");
+                        document.write("<td>" + index + "</td>");
+                        document.write("<td>" + (index * index) + "</td>");
+                        document.write("<td>" + (index * index * index) + "</td>");
+                        document.write("</tr>");
+                    }
+                    
+                    document.write("</tbody>");
+                    document.write("</table>");
+                </script>
+            </center>
+        </h3>
+    </div>
+</body>
+</html>

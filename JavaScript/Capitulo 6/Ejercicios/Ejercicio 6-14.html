@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6.14</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+</head>
+<body>
+    <header class="headerP">
+        Ejercicio 6.14<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 6/Ejercicios/Ejercicio 6-13.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/JavaScript/Capitulo 6/Ejercicios/Ejercicio 6-15.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <h3>
+            Indique el orden de evaluaci&oacute;n de los operadores en cada una de las siguientes intrucciones de JavaScript, y muestre el valor de <em>x</em> despu&eacute;s de ejecutar cada instrucci&oacute;n.
+        </h3>
+
+        <ol class="boxContent" type="a">
+            <div class="oracion">
+                <li>
+                    <em> x = 7 + 3 * 6 / 2 - 1; </em>
+                </li>
+                <p class="respuesta">
+                    3 * 6 = 18 <br>
+                    18 / 2 = 9 <br>
+                    7 + 9 = 16 <br>
+                    16 - 1 = 15 &larr; x
+                </p>
+            </div>
+            <div class="oracion">
+                <li>
+                    <em> x = 2 % 2 + 2 * 2 - 2 / 2; </em>
+                </li>
+                <p class="respuesta">
+                    2 % 2 = 0 <br>
+                    2 * 2 = 4 <br>
+                    2 / 2 = 1 <br>
+                    0 + 4 = 4 <br>
+                    4 - 1 = 3 &larr; x
+                </p>
+            </div>
+            <div class="oracion">
+                <li>
+                    <em> x = ( 3 * 9 * ( 3 + ( 9 * 3 / ( 3 ) ) ) ); </em>
+                </li>
+                <p class="respuesta">
+                    ( 3 ) = 3 <br>
+                    9 * 3 = 27 <br>
+                    ( 27 / 3 ) = 9 <br>
+                    ( 3 + 9 ) = 12 <br>
+                    3 * 9 = 27 <br>
+                    ( 27 * 12 ) = 324 &larr; x
+                </p>
+            </div>
+        </ol>
+    </div>
+</body>
+</html>
