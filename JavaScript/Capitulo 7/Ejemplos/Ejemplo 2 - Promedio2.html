@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<!-- Fig. 7.9: promedio2.html -->
+<!-- Repetición controlada por centinela para calcular el promedio de una clase. -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa del promedio de una clase: repetición controlada por centinela</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+</head>
+<body>
+    <header class="headerP">
+        Ejemplo 2<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 7/Ejemplos/Ejemplo 1 - Promedio.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/JavaScript/Capitulo 7/Ejemplos/Ejemplo 3 - Analisis.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <script>
+
+            var total; /* suma de calificaciones */
+            var contadorCalificaciones; /* número de calificaciones introducidas */
+            var calificacion; /* calificación escrita por el usuario (como una cadena) */
+            var valorCalificacion; /* valor de la calificación (convertido en entero) */
+            var promedio; /* promedio de todas las calificaciones */
+
+            /* Fase de inicialización */
+            total = 0; /* borrar el total */
+            contadorCalificaciones = 0; /* preparar para iterar */
+
+            /* Fase de procesamiento */
+            /* pedir la entrada y leer calificacion del usuario */
+            calificacion = window.prompt("Escriba la calificación entera, -1 para salir: ", "0");
+
+            /* convertir calificacion de cadena en entero */
+            valorCalificacion = parseInt(calificacion);
+
+            while (valorCalificacion != -1) {
+
+                /* sumar valorCalificacion al total */
+                total = total + valorCalificacion;
+
+                /* sumar 1 a contadorCalificaciones */
+                contadorCalificaciones = contadorCalificaciones + 1;
+
+                /* pedir la entrada y leer calificacion del usuario */
+                calificacion = window.prompt("Escriba la calificación entera, -1 para salir: ", "0");
+                
+                /* convertir calificacion de cadena en entero */
+                valorCalificacion = parseInt(calificacion);
+            } /* fin de while */
+
+            /* Fase de terminación */
+            if (contadorCalificaciones != 0) {
+                promedio = total / contadorCalificaciones;
+
+                /* muestra el promedio de las calificaciones de los exámenes */
+                document.writeln("<h1>El promedio de la clase es " + promedio + "</h1>");
+            } /* fin de if */
+            else 
+                document.writeln("<p>No se introdujeron calificaciones.</p>");
+
+        </script>
+    </div>
+</body>
+</html>

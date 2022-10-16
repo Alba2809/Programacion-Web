@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<!-- Fig. 7.11: analisis.html -->
+<!-- Calculo de los resultados de un examen. -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An&aacute;lisis de los resultados de un examen</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+</head>
+<body>
+    <header class="headerP">
+        Ejemplo 3<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 7/Ejemplos/Ejemplo 2 - Promedio2.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/JavaScript/Capitulo 7/Ejemplos/Ejemplo 4 - Incremento.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <script>
+
+            /* inicializar variables en declaraciones */
+            var aprobados = 0; /* número de aprobados */
+            var reprobados = 0; /* número de reprobados */
+            var estudiante = 1; /* contador de estudiantes */
+            var resultado; /* el resultado de un examen */
+
+            /* procesar 10 estudiantes; ciclo controlador por contador */
+            while (estudiante <= 10) {
+                resultado = window.prompt("Escriba el resultado (1 = aprobado, 2 = reprobado)", "0");
+
+                if( resultado == "1" )
+                    aprobados = aprobados + 1;
+                else
+                    reprobados = reprobados + 1;
+
+                estudiante = estudiante + 1;
+            } /* fin de while */
+
+            /* fase de terminación */
+            document.writeln("<h1>Resultados del examen</h1>");
+            document.writeln("<p>Aprobados: " + aprobados + "; Reprobados: " + reprobados + "</p>");
+
+            if ( aprobados > 8 )
+                document.writeln("<p>Bono para el instructor.</p>");
+
+        </script>
+    </div>
+</body>
+</html>
