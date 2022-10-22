@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7.13</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+</head>
+<body>
+    <header class="headerP">
+        Ejercicio 7.13<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 7/Ejercicios/Ejercicio 7-12.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/JavaScript/Capitulo 7/Ejercicios/Ejercicio 7-14.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <h3>
+            Una empresa grande paga a sus vendedores mediante comisiones. Los vendedores reciben &dollar;200 por semana, m&aacute;s el 9 por ciento de sus ventas brutas durante esa semana. Por ejemplo, un vendedor que vende &dollar;5000 de mercanc&iacute;a en una semana, recibe &dollar;200 m&aacute;s el 9 por ciento de 5000, o un total de &dollar;650. Usted acaba de recibir una lista de los art&iacute;culos vendidos por cada vendedor. Los valores de estos art&iacute;culos son los siguientes: <br>
+            <center>
+                <table border="0.1" style='width: 200px;'>
+                    <thead style="text-align: left;">
+                        <tr>
+                            <th>Art&iacute;culo</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody style="font-weight: normal;">
+                        <tr>
+                            <td>1</td>
+                            <td>239.99</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>129.75</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>99.95</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>350.89</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </center>
+            Desarrolle una secuencia de comandos que reciba como entrada los art&iacute;culos vendidos por un vendedor durante la &uacute;ltima semana, que calcule los ingresos de ese vendedor y produzca texto de HTML5 para mostrar ingresos de ese vendedor.
+        </h3>
+        <p class="boxContent">
+            Pseudoc&oacute;digo: <br>
+            <b>Variables</b> articulo = 1, cantidad = 0, ventaBruta = 0, nuevePorciento = 0, totalArt = 0, ingreso = 0; <br>
+            <b>Abrir</b> etiqueta h3 <br>
+            <b>Mientras</b> totalArt sea menor a 4 <br>
+            &emsp;&emsp;<b>Recibir</b> el ID del art&iacute;culo <br>
+            &emsp;&emsp;<b>Convertir</b> articulo a entero <br>
+            &emsp;&emsp;<b>Si</b> articulo es menor a 0 o mayor a 4 <br>
+            &emsp;&emsp;&emsp;&emsp;<b>Imprimir</b> mensaje de alerta <br>
+            &emsp;&emsp;&emsp;&emsp;<b>Romper</b> ciclo <b>Mientras</b> <br>
+            &emsp;&emsp;<b>Si</b> articulo es igual a 0 <br>
+            &emsp;&emsp;&emsp;&emsp;<b>Romper</b> ciclo <b>Mientras</b> <br>
+            &emsp;&emsp;<b>Recibir</b> cantidad del art&iacute;culo <br>
+            &emsp;&emsp;<b>Convertir</b> cantidad en entero <br>
+            &emsp;&emsp;<b>Si</b> articulo es igual a 1 <br>
+            &emsp;&emsp;&emsp;&emsp;<b>Acumular</b> suma de ventaBruta con el producto de cantidad y 239.99 <br>
+            &emsp;&emsp;&emsp;&emsp;<b>Acumular</b> suma de ventaBruta con el producto de cantidad y 129.75 <br>
+            &emsp;&emsp;&emsp;&emsp;<b>Acumular</b> suma de ventaBruta con el producto de cantidad y 99.95 <br>
+            &emsp;&emsp;&emsp;&emsp;<b>Acumular</b> suma de ventaBruta con el producto de cantidad y 350.89 <br>
+            &emsp;&emsp;<b>Incrementar</b> totalArt <br>
+            <b>Calcular</b> ingreso del vendedor <br>
+            <b>Si</b> totalArt es diferente a 0 y no se introdujo un ID inv&aacute;lido <br>
+            &emsp;&emsp;<b>Imprimir</b> ventaBruta e ingreso de la semana <br><br>
+
+            C&oacute;digo JavaScript: <br>
+            <b>let</b> articulo = 1, cantidad = 0, ventaBruta = 0, nuevePorciento = 0, totalArt = 0, ingreso = 0;<br>
+            <b>document</b>.writeln("&lt;h3>");<br>
+            <b>while</b>(totalArt < 4){ <br>
+                &emsp;&emsp;<b>articulo</b> = window.prompt("ID del artículo (1 al 4)\nNota: Introduzca 0 para salir.", 0);<br>
+                &emsp;&emsp;<b>articulo</b> = parseInt(articulo);<br><br>
+
+                &emsp;&emsp;<b>if</b>((articulo < 0) || (articulo > 4)){<br>
+                    &emsp;&emsp;&emsp;&emsp;<b>window</b>.alert("Se introdujo un ID inválido.");<br>
+                    &emsp;&emsp;&emsp;&emsp;<b>break</b>;<br>
+                &emsp;&emsp;}<br>
+                &emsp;&emsp;<b>if</b>(articulo == 0) break;<br><br>
+                
+                &emsp;&emsp;<b>cantidad</b> = window.prompt("Cantidad del artículo " + articulo, 0);<br>
+                &emsp;&emsp;<b>cantidad</b> = parseInt(cantidad);<br><br>
+
+                &emsp;&emsp;<b>if</b>(articulo == 1) ventaBruta += cantidad * 239.99;<br><br>
+
+                &emsp;&emsp;<b>if</b>(articulo == 2) ventaBruta += cantidad * 129.75;<br><br>
+
+                &emsp;&emsp;<b>if</b>(articulo == 3) ventaBruta += cantidad * 99.95;<br><br>
+
+                &emsp;&emsp;<b>if</b>(articulo == 4) ventaBruta += cantidad * 350.89;<br><br>
+
+                &emsp;&emsp;<b>++totalArt</b>;<br>
+            } <br><br>
+
+
+            <b>ingreso</b> = 200 + (ventaBruta * 0.09);<br><br>
+
+            <b>if</b>((totalArt != 0) && ((articulo >= 0) && (articulo <= 4))){ <br>
+                &emsp;&emsp;<b>document</b>.writeln("El vendedor vendió $" + ventaBruta.toFixed(4) + " en la semana. &lt;br>Por lo tanto, su ingreso es de " + ingreso.toFixed(4) + "&lt;/h3>"); <br>
+            }
+        </p>
+        <script>
+            let articulo = 1, cantidad = 0, ventaBruta = 0, nuevePorciento = 0, totalArt = 0, ingreso = 0;
+            document.writeln("<h3>");
+            while(totalArt < 4){
+                articulo = window.prompt("ID del artículo (1 al 4)\nNota: Introduzca 0 para salir.", 0);
+                articulo = parseInt(articulo);
+
+                if((articulo < 0) || (articulo > 4)){
+                    window.alert("Se introdujo un ID inválido.");
+                    break;
+                }
+                if(articulo == 0) break;
+                
+                cantidad = window.prompt("Cantidad del artículo " + articulo, 0);
+                cantidad = parseInt(cantidad);
+
+                if(articulo == 1) ventaBruta += cantidad * 239.99;
+
+                if(articulo == 2) ventaBruta += cantidad * 129.75;
+
+                if(articulo == 3) ventaBruta += cantidad * 99.95;
+
+                if(articulo == 4) ventaBruta += cantidad * 350.89;
+
+                ++totalArt;
+            }
+
+            ingreso = 200 + (ventaBruta * 0.09);
+
+            if((totalArt != 0) && ((articulo >= 0) && (articulo <= 4))){
+                document.writeln("El vendedor vendió $" + ventaBruta.toFixed(4) + " en la semana. <br>Por lo tanto, su ingreso es de " + ingreso.toFixed(4) + "</h3>");
+            }
+        </script>
+    </div>
+</body>
+</html>

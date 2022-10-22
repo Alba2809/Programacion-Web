@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7.11</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+</head>
+<body>
+    <header class="headerP">
+        Ejercicio 7.11<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 7/Ejercicios/Ejercicio 7-10.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/JavaScript/Capitulo 7/Ejercicios/Ejercicio 7-12.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <h3>
+            Los conductores se preocupan acerca del kilometraje de sus autom&oacute;viles. Un conductor ha llevado el control de varios reabastecimientos de gasolina, registrando los kil&oacute;metros conducidos y los litros usados en cada viaje. Desarrolle una secuencia de comandos que reciba como entrada los kil&oacute;metros conducidos y los litros usados por cada viaje. La secuencia de comandos debe calcular y producir texto de HTML5 que muestre el n&uacute;mero de kil&oacute;metros por litro obtenidos en cada viaje, y debe imprimir el total de kil&oacute;metros por litro obtenidos en todos los reabastecimientos hasta este punto. Use di&aacute;logos <em>prompt</em> para obtener los datos del usuario.
+        </h3>
+        <p class="boxContent">
+            Pseudoc&oacute;digo: <br>
+            <b>Variables</b> kilometros = 1, gasolina = 0, kilPorLit, total = 0, viaje = 1; <br>
+            <b>Abrir</b> etiqueta h3 <br>
+            <b>Mientras</b> la cantidad de <em>viaje</em> sea menor o igual a 50: <br>
+            &emsp;&emsp;<b>Recibir</b> kilometros conducido en el viaje <br>
+            &emsp;&emsp;<b>Convertir</b> kilometros en entero <br>
+            &emsp;&emsp;<b>Si</b> kilometros es igual a 0 <br>
+            &emsp;&emsp;&emsp;&emsp;<b>Romper</b> el ciclo <b>Mientras</b> <br>
+            &emsp;&emsp;<b>Recibir</b> gasolina usados en el viaje <br>
+            &emsp;&emsp;<b>Convertir</b> gasolina en entero <br>
+            &emsp;&emsp;<b>Calcular</b> kilometros recorridos por cada litro de gasolina en el viaje <br>
+            &emsp;&emsp;<b>Acumular</b> total de kilometros por litro en todos los viajes <br>
+            &emsp;&emsp;<b>Imprimir</b> resultado <br>
+            &emsp;&emsp;<b>Incrementar</b> viaje <br>
+            <b>Si</b> viaje es mayor a 0 <br>
+            &emsp;&emsp;<b>Imprimir</b> total de kilometros por litro en todos los viajes <br>
+            <b>Cerrar</b> etiqueta h3 <br><br>
+            
+            C&oacute;digo JavaScript: <br>
+            <b>let</b> kilometros = 1, gasolina = 0, kilPorLit, total = 0, viaje = 0; <br>
+            <b>document</b>.writeln("&lt;h3>"); <br>
+            <b>while</b>(viaje <= 50){ <br>
+                &emsp;&emsp;<b>kilometros</b> = window.prompt("Kilómetros conducidos (viaje " + (viaje + 1) +")\nNota: Introduzca 0 para salir.", 0); <br>
+                &emsp;&emsp;<b>kilometros</b> = parseInt(kilometros); <br> <br>
+
+                &emsp;&emsp;<b>if</b>(kilometros == 0) break; <br><br>
+
+                &emsp;&emsp;<b>gasolina</b> = window.prompt("Gasolina usados (viaje " + (viaje + 1) +")", 0); <br>
+                &emsp;&emsp;<b>gasolina</b> = parseInt(gasolina); <br><br>
+
+                &emsp;&emsp;<b>kilPorLit</b> = kilometros / gasolina; <br><br>
+
+                &emsp;&emsp;<b>total</b> += kilPorLit; <br><br>
+
+                &emsp;&emsp;<b>document</b>.writeln("Kilómetros por litro (viaje " + viaje + "): " + kilPorLit + "&lt;br>"); <br><br>
+
+                &emsp;&emsp;<b>++viaje</b>;<br>
+            }<br>
+            <b>viaje</b> != 0 ? document.writeln("Total de kilómetros por litros: " + total) : null; <br>
+            <b>document</b>.writeln("&lt;/h3>");
+        </p>
+        <script>
+            let kilometros = 1, gasolina = 0, kilPorLit, total = 0, viaje = 0;
+            document.writeln("<h3>");
+            while(viaje <= 50){
+                kilometros = window.prompt("Kilómetros conducidos (viaje " + (viaje + 1) +")\nNota: Introduzca 0 para salir.", 0);
+                kilometros = parseInt(kilometros);
+
+                if(kilometros == 0) break;
+
+                gasolina = window.prompt("Gasolina usados (viaje " + (viaje + 1) +")", 0);
+                gasolina = parseInt(gasolina);
+
+                kilPorLit = kilometros / gasolina;
+
+                total += kilPorLit;
+
+                document.writeln("Kilómetros por litro (viaje " + viaje + "): " + kilPorLit + "<br>");
+
+                ++viaje;
+            }
+            viaje != 0 ? document.writeln("Total de kilómetros por litros: " + total) : null;
+            document.writeln("</h3>");
+        </script>
+    </div>
+</body>
+</html>

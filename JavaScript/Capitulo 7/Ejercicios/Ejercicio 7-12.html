@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7.12</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+</head>
+<body>
+    <header class="headerP">
+        Ejercicio 7.12<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 7/Ejercicios/Ejercicio 7-11.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/JavaScript/Capitulo 7/Ejercicios/Ejercicio 7-13.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <h3>
+            Desarrolle una secuencia de comandos que determine si alguno de los clientes de una tienda de departamentos se ha excedido del l&iacute;mite de cr&eacute;dito de una cuenta. Para cada cliente se tienen los siguientes datos: <br>
+            a) El n&uacute;mero de cuenta. <br>
+            b) El saldo al inicio del mes. <br>
+            c) El total de todos los art&iacute;culos cargados por el cliente en el mes. <br>
+            d) El total de todos los cr&eacute;ditos aplicados a la cuenta del cliente en el mes. <br>
+            e) El l&iacute;mite de cr&eacute;dito permitido. <br>
+            La secuencia de comandos debe recibir como entrada cada uno de estos datos desde un di&aacute;logo <em>prompt</em> como entero, debe calcular el nuevo saldo (<em>= saldo inicial + cargos - cr&eacute;ditos</em>), mostrar el nuevo balance y determinar si &eacute;ste excede el l&iacute;mite de cr&eacute;dito del cliente. Para los clientes cuyo l&iacute;mite de cr&eacute;dito sea excedido, la secuencia de comandos debe producir texto de HTML5 que muestre el mensaje "<em>Se excedi&oacute; el l&iacute;mite de su cr&eacute;dito</em>".
+        </h3>
+        <p class="boxContent">
+            Pseudoc&oacute;digo: <br>
+            <b>Variables</b> noCuenta = 1, saldoIn = 0, cargos = 0, creditos = 0, limite = 0, nuevoSaldo, clientes = 0; <br>
+            <b>Abrir</b> etiqueta h3 <br>
+            <b>Mientras</b> clientes sea menor igual a 50: <br>
+            &emsp;&emsp;<b>Recibir</b> n&uacute;mero de cuenta <br>
+            &emsp;&emsp;<b>Convertir</b> noCuenta en entero <br>
+            &emsp;&emsp;<b>Si</b> noCuenta es igual a 0 <br>
+            &emsp;&emsp;&emsp;&emsp;<b>Romper</b> el ciclo <b>Mientras</b> <br>
+            &emsp;&emsp;<b>Recibir</b> total de cargos del mes <br>
+            &emsp;&emsp;<b>Convertir</b> cargos en entero <br>
+            &emsp;&emsp;<b>Recibir</b> total de cr&eacute;ditos <br>
+            &emsp;&emsp;<b>Convertir</b> creditos en entero <br>
+            &emsp;&emsp;<b>Recibir</b> l&iacute;mite de cr&eacute;ditos <br>
+            &emsp;&emsp;<b>Convertir</b> creditos en entero <br>
+            &emsp;&emsp;<b>Calcular</b> nuevo saldo <br>
+            &emsp;&emsp;<b>Imprimir</b> noCuenta, nuevoSaldo y limite del cliente <br>
+            &emsp;&emsp;<b>Si</b> nuevoSaldo es mayor a limite <br>
+            &emsp;&emsp;&emsp;&emsp;<b>Imprimir</b> mensaje de que excedi&oacute; del l&iacute;mite <br>
+            &emsp;&emsp;<b>Incrementar</b> clientes <br>
+            <b>Cerrar</b> etiqueta h3 <br><br>
+
+            C&oacute;digo JavaScript: <br>
+            <b>let</b> noCuenta = 1, saldoIn = 0, cargos = 0, creditos = 0, limite = 0, nuevoSaldo, clientes = 0;
+            <b>document</b>.writeln("&lt;h3>"); <br>
+            <b>while</b>(clientes <= 50){ <br>
+                &emsp;&emsp;<b>document</b>.writeln("&lt;br>"); <br>
+                &emsp;&emsp;<b>noCuenta</b> = window.prompt("Número de cuenta\nNota: Introduzca 0 para salir.", 0); <br>
+                &emsp;&emsp;<b>noCuenta</b> = parseInt(noCuenta); <br><br>
+                
+                &emsp;&emsp;<b>if</b>(noCuenta == 0) break; <br><br>
+
+                &emsp;&emsp;<b>saldoIn</b> = window.prompt("Saldo inicial del mes", 1);<br>
+                &emsp;&emsp;<b>saldoIn</b> = parseInt(saldoIn);<br><br>
+
+                &emsp;&emsp;<b>cargos</b> = window.prompt("Total de cargos del mes", 1);<br>
+                &emsp;&emsp;<b>cargos</b> = parseInt(cargos);<br><br>
+
+                &emsp;&emsp;<b>creditos</b> = window.prompt("Total de créditos del mes", 1);<br>
+                &emsp;&emsp;<b>creditos</b> = parseInt(creditos);<br><br>
+
+                &emsp;&emsp;<b>limite</b> = window.prompt("Límite de crédito", 1);<br>
+                &emsp;&emsp;<b>limite</b> = parseInt(limite);<br><br>
+
+                &emsp;&emsp;<b>nuevoSaldo</b> = saldoIn + cargos - creditos;<br><br>
+                
+                &emsp;&emsp;<b>document</b>.writeln("Cuenta: " + noCuenta + "&lt;br>Nuevo saldo: " + nuevoSaldo + "&lt;br>Límite: " + limite + "&lt;br>");<br>
+                &emsp;&emsp;<b>if</b>( nuevoSaldo > limite )<br>
+                &emsp;&emsp;&emsp;&emsp;<b>document</b>.writeln("Se excedió el límite de su crédito.");<br>
+                &emsp;&emsp;<b>++clientes</b>; <br>
+            }<br>
+            <b>document</b>.writeln("&lt;/h3>");
+        </p>
+        <script>
+            let noCuenta = 1, saldoIn = 0, cargos = 0, creditos = 0, limite = 0, nuevoSaldo, clientes = 0;
+            document.writeln("<h3>");
+            while(clientes <= 50){
+                document.writeln("<br>");
+                noCuenta = window.prompt("Número de cuenta\nNota: Introduzca 0 para salir.", 0);
+                noCuenta = parseInt(noCuenta);
+                
+                if(noCuenta == 0) break;
+
+                saldoIn = window.prompt("Saldo inicial del mes", 1);
+                saldoIn = parseInt(saldoIn);
+
+                cargos = window.prompt("Total de cargos del mes", 1);
+                cargos = parseInt(cargos);
+
+                creditos = window.prompt("Total de créditos del mes", 1);
+                creditos = parseInt(creditos);
+
+                limite = window.prompt("Límite de crédito", 1);
+                limite = parseInt(limite);
+
+                nuevoSaldo = saldoIn + cargos - creditos;
+                
+                document.writeln("Cuenta: " + noCuenta + "<br>Nuevo saldo: " + nuevoSaldo + "<br>Límite: " + limite + "<br>");
+                if( nuevoSaldo > limite )
+                    document.writeln("Se excedió el límite de su crédito.");
+
+                ++clientes;
+            }
+            document.writeln("</h3>");
+        </script>
+    </div>
+</body>
+</html>
