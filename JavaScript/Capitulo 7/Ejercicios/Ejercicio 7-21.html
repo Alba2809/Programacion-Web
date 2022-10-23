@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7.21</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+</head>
+<body>
+    <header class="headerP">
+        Ejercicio 7.21<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 7/Ejercicios/Ejercicio 7-20.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/JavaScript/Capitulo 7/Ejercicios/Ejercicio 7-22.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <h3>
+            Escriba un secuencia de comandos que produzca texto de HTML5 que siga mostrando en la ventana de comandos los m&uacute;ltiplos del entero 2 (a saber, 2, 4, 8, 16, 32, 64, etc). Su ciclo <em>no debe terminar</em> (es decir, debe crear un <em>ciclo infinito</em>). ¿Qu&eacute; ocurre cuando ejecuta este programa?
+        </h3>
+        <p class="boxContent">
+            C&oacute;digo JavaScript: <br>
+            <b>let</b> contador = 1; <br>
+            <b>while</b>(contador < 10){ <br>
+                &emsp;&emsp;<b>document</b>.writeln("&lt;p>" + (2*contador) + "&lt;/p>"); <br>
+            } <br><br>
+            Al ejecutar el anterior bloque de c&oacute;digo, no termina de cargar la p&aacute;gina, se queda en blanco.
+        </p>
+        <!-- <script>
+            let contador = 1;
+            while(contador < 10){
+                document.writeln("<p>" + (2*contador) + "</p>");
+                contador++; 
+            }
+        </script> -->
+    </div>
+</body>
+</html>

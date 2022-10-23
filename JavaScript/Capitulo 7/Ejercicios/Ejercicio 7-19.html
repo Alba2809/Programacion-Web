@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7.19</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+</head>
+<body>
+    <header class="headerP">
+        Ejercicio 7.19<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 7/Ejercicios/Ejercicio 7-18.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/JavaScript/Capitulo 7/Ejercicios/Ejercicio 7-20.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <h3>
+            (<em>Problema del else suelto</em>) Determine la salida de cada uno de los siguientes segmentos de c&oacute;digo, cuando x es 9 y y es 11, y cuando x es 11 y y es 9. Observe que el int&eacute;rprete ignora la sangr&iacute;a en una secuencia de comandos. Adem&aacute;s, el int&eacute;rprete de JavaScript siempre asocia un <em>else</em> con el <em>if</em> anterior, a menos que se le indique de otra forma mediante la colocaci&oacute;n de llaves ({}). A primera vista, tal vez no est&eacute; seguro de cu&aacute;l <em>if</em> corresponde a cu&aacute;l <em>else</em>. Esta situaci&oacute;n se conoce como el problema del "<em>else suelto</em>". Hemos eliminado la sangr&iacute;a del siguiente c&oacute;digo para hacer el problema m&aacute;s retador. [<em>Sugerencia</em>: Aplique las convenciones de sangr&iacute;a que ha aprendido].
+        </h3>
+        <ol class="boxContent" type="a">
+            <div class="oracion">
+                <li>
+                    <b>if</b> ( x < 10 ) <br>
+                    <b>if</b> ( y < 10 ) <br>
+                    document.writeln ( "&lt;p>*****&lt;/p>" ); <br>
+                    <b>else</b> <br>
+                    document.writeln ( "&lt;p>#####&lt;/p>" ); <br>
+                    document.writeln ( "&lt;p>$$$$$&lt;/p>" );
+                </li>
+                <p class="respuesta">
+                    * Cuando x = 9 , y = 11 * <br>
+                    ##### <br>
+                    $$$$$ <br><br>
+
+                    * Cuando x = 11 , y = 9 * <br>
+                    $$$$$
+                </p>
+            </div>
+            <div class="oracion">
+                <li>
+                    <b>if</b> ( x < 10 ) <br>
+                    { <br>
+                    <b>if</b> ( y > 10 ) <br>
+                    document. writeln ( "&lt;p>*****&lt;/p>" ); <br>
+                    } <br>
+                    <b>else</b> <br>
+                    { <br>
+                    document.writeln ( "&lt;p>#####&lt;/p>" ); <br>
+                    document.writeln ( "&lt;p>$$$$$&lt;/p>" ); <br>
+                    }
+                </li>
+                <p class="respuesta">
+                    * Cuando x = 9 , y = 11 * <br>
+                    ***** <br><br>
+
+                    * Cuando x = 11 , y = 9 * <br>
+                    ##### <br>
+                    $$$$$
+                </p>
+            </div>
+        </ol>
+    </div>
+</body>
+</html>

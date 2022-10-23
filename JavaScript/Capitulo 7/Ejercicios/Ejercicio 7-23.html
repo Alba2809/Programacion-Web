@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7.23</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+</head>
+<body>
+    <header class="headerP">
+        Ejercicio 7.23<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 7/Ejercicios/Ejercicio 7-22.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+    </header>
+
+    <div class="contenido">
+        <h3>
+            Escriba una secuencia de comandos que reciba como entrada un entero cifrado de cuatro d&iacute;gitos (del ejercicio 7.22) y lo <em>descrifre</em> para formar el n&uacute;mero original.
+        </h3>
+        <p class="boxContent">
+            Pseudoc&oacute;digo: <br>
+            <b>Variables</b> cifradoS, digito1, digito2, digito3, digito4, descifrado, temp <br>
+            <b>Recibir</b> numero entero de cuatro d&iacute;gitos <br>
+            <b>Mientras</b> el largo de cifradoS sea diferente a 4 <br>
+            &emsp;&emsp;<b>Mostrar</b> alerta con el mensaje error <br>
+            &emsp;&emsp;<b>Recibir</b> nuevo valor de cifradoS <br>
+            <b>Obtener</b> primer car&aacute;cter de cifradoS, y convertirlo a entero <br>
+            <b>Obtener</b> segundo car&aacute;cter de cifradoS, y convertirlo a entero <br>
+            <b>Obtener</b> tercer car&aacute;cter de cifradoS, y convertirlo a entero <br>
+            <b>Obtener</b> cuarto car&aacute;cter de cifradoS, y convertirlo a entero <br>
+            <b>Calcular</b> la primera parte del descifrado ( [(digito1 + 10) - 7] % 10 ) <br>
+            <b>Calcular</b> la primera parte del descifrado ( [(digito2 + 10) - 7] % 10 ) <br>
+            <b>Calcular</b> la primera parte del descifrado ( [(digito3 + 10) - 7] % 10 ) <br>
+            <b>Calcular</b> la primera parte del descifrado ( [(digito4 + 10) - 7] % 10 ) <br>
+            <b>Intercambiar</b> digito1 con digito3 con ayuda de un temporal <br>
+            <b>Intercambiar</b> digito2 con digito4 con ayuda de un temporal <br>
+            <b>Unir</b> los cuatro d&iacute;gitos en la variable descifrado <br>
+            <b>Imprimir</b> n&uacute;mero descifrado/original <br><br>
+
+            C&oacute;digo JavaScript: <br>
+            <b>function</b> noVal(number) { &larr;Funci&oacute;n para validar caracteres de la cadena y que se pueda introducir 0 al inicio de este<br>
+                &emsp;&emsp;<b>let</b> result = false; <br>
+                &emsp;&emsp;<b>for</b> (let index = 0; index < number.length; index++) { <br>
+                    &emsp;&emsp;&emsp;&emsp;<b>if</b>(number[index] == "." || number[index] == " "){ <br>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b>result</b> = true; <br>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b>break</b>; <br>
+                    &emsp;&emsp;&emsp;&emsp;} <br>
+                &emsp;&emsp;} <br>
+                &emsp;&emsp;<b>return</b> result; <br>
+            } <br><br>
+            <b>let</b> cifradoS, digito1, digito2, digito3, digito4, descifrado, temp;<br>
+            <b>cifradoS</b> = window.prompt("Escriba un número entero de 4 dígitos", "1111");<br><br>
+
+            <b>while</b>(cifradoS.length != 4 || noVal(cifradoS)){ <br>
+                &emsp;&emsp;<b>window</b>.alert("Número inválido."); <br>
+                &emsp;&emsp;<b>cifradoS</b> = window.prompt("Escriba un número entero de 4 dígitos", "1111"); <br>
+            } <br><br>
+
+            <b>digito1</b> = parseInt(cifradoS[0]); <br>
+            <b>digito2</b> = parseInt(cifradoS[1]);<br>
+            <b>digito3</b> = parseInt(cifradoS[2]);<br>
+            <b>digito4</b> = parseInt(cifradoS[3]);<br><br>
+
+            <b>digito1</b> = ((digito1 + 10) - 7) % 10;<br>
+            <b>digito2</b> = ((digito2 + 10) - 7) % 10;<br>
+            <b>digito3</b> = ((digito3 + 10) - 7) % 10;<br>
+            <b>digito4</b> = ((digito4 + 10) - 7) % 10;<br><br>
+
+            <b>temp</b> = digito3;<br>
+            <b>digito3</b> = digito1;<br>
+            <b>digito1</b> = temp;<br><br>
+            
+            <b>temp</b> = digito4;<br>
+            <b>digito4</b> = digito2;<br>
+            <b>digito2</b> = temp;<br><br>
+
+            <b>descifrado</b> = digito1 + "" + digito2 + "" + digito3 + digito4;<br><br>
+
+            <b>document</b>.write("&lt;h3>Número entero descifrado: " + descifrado + "&lt;/h3>");
+        </p>
+        <script>
+            function noVal(number) {
+                let result = false;
+                for (let index = 0; index < number.length; index++) {
+                    if(number[index] == "." || number[index] == " "){
+                        result = true;
+                        break;
+                    }
+                }
+                return result;
+            }
+            let cifradoS, digito1, digito2, digito3, digito4, descifrado, temp;
+            cifradoS = window.prompt("Escriba un número entero de 4 dígitos", "1111");
+
+            while(cifradoS.length != 4 || noVal(cifradoS)){
+                window.alert("Número inválido.");
+                cifradoS = window.prompt("Escriba un número entero de 4 dígitos", "1111");
+            }
+
+            digito1 = parseInt(cifradoS[0]);
+            digito2 = parseInt(cifradoS[1]);
+            digito3 = parseInt(cifradoS[2]);
+            digito4 = parseInt(cifradoS[3]);
+
+            digito1 = ((digito1 + 10) - 7) % 10;
+            digito2 = ((digito2 + 10) - 7) % 10;
+            digito3 = ((digito3 + 10) - 7) % 10;
+            digito4 = ((digito4 + 10) - 7) % 10;
+
+            temp = digito3;
+            digito3 = digito1;
+            digito1 = temp;
+            
+            temp = digito4;
+            digito4 = digito2;
+            digito2 = temp;
+
+            descifrado = digito1 + "" + digito2 + "" + digito3 + digito4;
+
+            document.write("<h3>Número entero descifrado: " + descifrado + "</h3>");
+        </script>
+    </div>
+</body>
+</html>

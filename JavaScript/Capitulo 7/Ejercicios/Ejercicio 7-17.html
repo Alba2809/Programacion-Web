@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7.17</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+</head>
+<body>
+    <header class="headerP">
+        Ejercicio 7.17<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 7/Ejercicios/Ejercicio 7-16.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/JavaScript/Capitulo 7/Ejercicios/Ejercicio 7-18.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <h3>
+            Utilizando una metodolog&iacute;a similar a la del ejercicio 7.15, encuentre los <em>dos</em> valores m&aacute;s grandes de los 10 que se introdujeron. [<em>Nota</em>: puede introducir cada n&uacute;mero s&oacute;lo una vez].
+        </h3>
+        <p class="boxContent">
+            Pseudoc&oacute;digo: <br>
+            <b>Variables</b> contador = 0, numero, mayor1 = 0, mayor2 = 0; <br>
+            <b>Mientras</b> contador sea menor a 10 <br>
+            &emsp;&emsp;<b>Recibir</b> n&uacute;mero de un digito <br>
+            &emsp;&emsp;<b>Extraer</b> primer caracter de la cadena&emsp;&emsp;&lArr;&emsp;&emsp;Para tener solo un digito. <br>
+            &emsp;&emsp;<b>Convertir</b> numero en entero <br>
+            &emsp;&emsp;<b>Si</b> mayor1 es igual a 0 <br>
+            &emsp;&emsp;&emsp;&emsp;<b>Reemplezar</b> mayor1 igual a numero <br>
+            &emsp;&emsp;<b>Sino-Si</b> mayor2 es igual a 0 <br>
+            &emsp;&emsp;&emsp;&emsp;<b>Reemplezar</b> mayor2 igual a numero <br>
+            &emsp;&emsp;<b>Sino-Si</b> numero es > a mayor1 <br>
+            &emsp;&emsp;&emsp;&emsp;<b>Reemplezar</b> mayor1 igual a numero <br>
+            &emsp;&emsp;<b>Sino-Si</b> numero es > a mayor2 <br>
+            &emsp;&emsp;&emsp;&emsp;<b>Reemplezar</b> mayor2 igual a numero <br>
+            &emsp;&emsp;<b>Incrementar</b> contador <br>
+            <b>Imprimir</b> el valor de mayor <br>
+            <b>Mostrar</b> alerta con el valor de mayor <br><br>
+
+            C&oacute;digo JavaScript: <br>
+            <b>let</b> contador = 0, numero, mayor1 = 0, mayor2 = 0; <br>
+            <b>while</b> ( contador < 10 ){ <br>
+                &emsp;&emsp;<b>numero</b> = window.prompt("Escriba un numero de un digito", "1"); <br><br>
+
+                &emsp;&emsp;<b>numero</b> = numero.substr(0,1); <br><br>
+
+                &emsp;&emsp;<b>numero</b> = parseInt(numero); <br><br>
+
+                &emsp;&emsp;<b>if</b>(mayor1 == 0) mayor1 = numero;<br>
+                &emsp;&emsp;<b>else if</b>(mayor2 == 0) mayor2 = numero;<br>
+                &emsp;&emsp;<b>else if</b>(numero > mayor1) mayor1 = numero;<br>
+                &emsp;&emsp;<b>else if</b>(numero > mayor2) mayor2 = numero;<br><br>
+
+                &emsp;&emsp;<b>++contador</b>; <br>
+            } <br>
+            <b>document</b>.writeln("&lt;h3>El número mayor es: " + mayor + "&lt;/h3>"); <br>
+        </p>
+        <script>
+            let contador = 0, numero, mayor1 = 0, mayor2 = 0;
+            while ( contador < 10 ){
+                numero = window.prompt("Escriba un numero de un digito", "1");
+
+                numero = numero.substr(0,1);
+
+                numero = parseInt(numero);
+
+                if(mayor1 == 0) mayor1 = numero;
+                else if(mayor2 == 0) mayor2 = numero;
+                else if(numero > mayor1) mayor1 = numero;
+                else if(numero > mayor2) mayor2 = numero;
+
+                ++contador; 
+            }
+            document.writeln("<h3>Los dos números mayores son: " + mayor1 + " y " + mayor2 + "</h3>");
+        </script>
+    </div>
+</body>
+</html>

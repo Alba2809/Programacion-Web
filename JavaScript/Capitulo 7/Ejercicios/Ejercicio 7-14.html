@@ -17,7 +17,7 @@
         </p>
 	<a href="/JavaScript/Capitulo 7/Ejercicios/Ejercicio 7-13.html"><button type="submit">Atras</button></a>
         <a href="/index.html"><button type="submit">Principal</button></a>
-        <a href="/JavaScript/Capitulo 7/Ejercicios"><button type="submit">Siguiente</button></a>
+        <a href="/JavaScript/Capitulo 7/Ejercicios/Ejercicio 7-15.html"><button type="submit">Siguiente</button></a>
     </header>
 
     <div class="contenido">
@@ -26,6 +26,43 @@
         </h3>
         <p class="boxContent">
             Pseudoc&oacute;digo: <br>
+            <b>Variables</b> empleado = 0, horas = 0, tarifa = 0, sueldoBruto = 0; <br>
+            <b>Abrir</b> etiqueta h3 <br>
+            <b>Mientras</b> empleado sea menor a 3 <br>
+            &emsp;&emsp;<b>Recibir</b> horas trabajadas del empleado <br>
+            &emsp;&emsp;<b>Convertir</b> horas en entero <br>
+            &emsp;&emsp;<b>Recibir</b> tarifa por hora del empleado <br>
+            &emsp;&emsp;<b>Convertir</b> tarifa en entero<br>
+            &emsp;&emsp;<b>Si</b> horas es menor o igual a 40 <br>
+            &emsp;&emsp;&emsp;&emsp;<b>Calcular</b> sueldoBruto es igual a horas por tarifa <br>
+            &emsp;&emsp;<b>Si-no</b>
+            &emsp;&emsp;&emsp;&emsp;<b>Calcular</b> sueldobruto es igual a tarifa por 40 horas <br>
+            &emsp;&emsp;&emsp;&emsp;<b>Acumular</b> sueldoBruto con el producto de (horas - 40) y (tarifa * 1.5) <br>
+            &emsp;&emsp;<b>Imprimir</b> sueldo bruto del empleado <br>
+            &emsp;&emsp;<b>Incrementar</b> empleado <br>
+            <b>Cerrar</b> etiqueta h3 <br><br>
+
+            C&oacute;digo JavaScript: <br>
+            <b>let</b> empleado = 0, horas = 0, tarifa = 0, sueldoBruto = 0; <br>
+            <b>document</b>.writeln("&lt;h3>"); <br>
+            <b>while</b>(empleado < 3){ <br>
+                &emsp;&emsp;<b>horas</b> = window.prompt("Horas trabajadas del empleado " + (empleado + 1), 40);<br>
+                &emsp;&emsp;<b>horas</b> = parseInt(horas);<br><br>
+
+                &emsp;&emsp;<b>tarifa</b> = window.prompt("Tarifa por hora del empeado " + (empleado + 1), 1);<br>
+                &emsp;&emsp;<b>tarifa</b> = parseFloat(tarifa); <br><br>
+
+                &emsp;&emsp;<b>if</b>(horas <= 40) sueldoBruto = horas * tarifa; <br>
+                &emsp;&emsp;<b>else</b>{ <br>
+                    &emsp;&emsp;&emsp;&emsp;<b>sueldoBruto</b> = tarifa * 40;<br>
+                    &emsp;&emsp;&emsp;&emsp;<b>sueldoBruto</b> += (horas - 40) * (tarifa * 1.5);<br>
+                &emsp;&emsp;} <br><br>
+                
+                &emsp;&emsp;<b>document</b>.writeln("Sueldo bruto del empleado " + (empleado + 1) + " es: " + sueldoBruto + "&lt;br>"); <br><br>
+                
+                &emsp;&emsp;<b>++empleado</b>; <br>
+            } <br>
+            <b>document</b>.writeln("&lt;/h3>");
         </p>
         <script>
             let empleado = 0, horas = 0, tarifa = 0, sueldoBruto = 0;
@@ -47,6 +84,7 @@
                 
                 ++empleado;
             }
+            document.writeln("</h3>");
         </script>
     </div>
 </body>
