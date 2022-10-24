@@ -27,7 +27,7 @@
             Pseudoc&oacute;digo: <br>
             <b>Variables</b> cifradoS, digito1, digito2, digito3, digito4, descifrado, temp <br>
             <b>Recibir</b> numero entero de cuatro d&iacute;gitos <br>
-            <b>Mientras</b> el largo de cifradoS sea diferente a 4 <br>
+            <b>Mientras</b> el largo de cifradoS sea diferente a 4 o contenga un carácter que no sea un número<br>
             &emsp;&emsp;<b>Mostrar</b> alerta con el mensaje error <br>
             &emsp;&emsp;<b>Recibir</b> nuevo valor de cifradoS <br>
             <b>Obtener</b> primer car&aacute;cter de cifradoS, y convertirlo a entero <br>
@@ -46,8 +46,9 @@
             C&oacute;digo JavaScript: <br>
             <b>function</b> noVal(number) { &larr;Funci&oacute;n para validar caracteres de la cadena y que se pueda introducir 0 al inicio de este<br>
                 &emsp;&emsp;<b>let</b> result = false; <br>
+                &emsp;&emsp;<b>let</b> numbersVal = /[0-9]/; <br>
                 &emsp;&emsp;<b>for</b> (let index = 0; index < number.length; index++) { <br>
-                    &emsp;&emsp;&emsp;&emsp;<b>if</b>(number[index] == "." || number[index] == " "){ <br>
+                    &emsp;&emsp;&emsp;&emsp;<b>if</b>(!numbersVal.test(number[index])){ <br>
                         &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b>result</b> = true; <br>
                         &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b>break</b>; <br>
                     &emsp;&emsp;&emsp;&emsp;} <br>
@@ -87,8 +88,9 @@
         <script>
             function noVal(number) {
                 let result = false;
+                let numbersVal = /[0-9]/;
                 for (let index = 0; index < number.length; index++) {
-                    if(number[index] == "." || number[index] == " "){
+                    if(!numbersVal.test(number[index])){
                         result = true;
                         break;
                     }
