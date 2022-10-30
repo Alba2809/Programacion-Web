@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8.11</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+</head>
+<body>
+    <header class="headerP">
+        Ejercicio 8.11<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 8/Ejercicios/Ejercicio 8-10.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/JavaScript/Capitulo 8/Ejercicios/Ejercicio 8-12.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <h3>
+            Un vendedor minorista en línea vende cinco productos distintos, cuyos precios de venta son los siguientes: producto 1, &dollar;2.98; producto 2, &dollar;4.50; producto 3, &dollar;9.98; producto 4, &dollar;4.49 y producto 5, &dollar;6.87. Escriba una secuencia de comandos que lea una serie de pares de números, como se muestra a continuación: <br>
+            a) Número del producto; <br>
+            b) Cantidad vendida durante un día. <br>
+            Su programa debe utilizar una instrucción <em>switch</em> para determinar el precio de venta de cada producto; además debe calcular y producir HTML5 para mostrar el valor total de venta de todos los productos vendidos la semana pasada. Use el cuadro de diálogo del indicador de comandos para obtener el número de producto y la cantidad requerida por el usuario. Use un ciclo controlado por centinela pra determinar cuándo debe el programa dejar de iterar para mostrar los resultados finales.
+        </h3>
+
+        <div class="boxContent">
+            <script>
+                let validar = /[0-9]/;
+                let numero = 1, cantidad, total = 0, semana = 0, temp = 0;
+                
+                while(numero != 0){
+                    numero = window.prompt("Introduzca el número del producto\nNota: 0 para salir.", "0");
+                    
+                    if(validar.test(numero) && (parseInt(numero) >= 0 && parseInt(numero) <= 5)){
+                        
+                        numero = parseInt(numero);
+
+                        if(numero == 0) break;
+
+                        cantidad = window.prompt("Introduzca la cantidad del producto ["+numero+"]", 1);
+
+                        if(validar.test(cantidad) && parseInt(cantidad) > 0){
+
+                            cantidad = parseInt(cantidad);
+
+                            switch(numero){
+                                case 1:
+                                    total = 2.98 * cantidad;
+                                    break;
+                                case 2:
+                                    total = 4.50 * cantidad;
+                                    break;
+                                case 3:
+                                    total = 9.98 * cantidad;
+                                    break;
+                                case 4:
+                                    total = 4.49 * cantidad;
+                                    break;
+                                case 5:
+                                    total = 6.87 * cantidad;
+                                    break;
+                            }
+
+                            document.writeln("<p>Producto: " + numero + "<br>Total: &dollar;" + total.toFixed(2));
+                            
+                            semana += total;
+
+                            temp++;
+                        }
+                        else{
+                            document.writeln("Introduzca un valor válido.");
+                            break;
+                        }
+                        
+                    }
+                    else{
+                        document.writeln("Introduzca un valor válido.");
+                        break;
+                    }
+                    
+                }
+
+                if(temp != 0) document.writeln("<p>Total de la semana: &dollar;" + semana.toFixed(2) + "</p>");
+            </script>
+        </div>
+    </div>
+</body>
+</html>

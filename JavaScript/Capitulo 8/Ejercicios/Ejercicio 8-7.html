@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8.7</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+</head>
+<body>
+    <header class="headerP">
+        Ejercicio 8.7<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 8/Ejercicios/Ejercicio 8-6.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/JavaScript/Capitulo 8/Ejercicios/Ejercicio 8-8.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <h3>
+            Escriba una secuencia de comandos que calcule el producto de los enteros impares del 1 al 15 y después imprima texto de HTML5 que muestre los resultados.
+        </h3>
+        <div class="boxContent">
+            <script>
+                let producto = 1;
+                for ( let numero = 1; numero <= 15; numero += 2) producto *= numero;
+                document.writeln("<p>El producto total es: " + producto + "</p>")
+            </script>
+        </div>
+    </div>
+</body>
+</html>

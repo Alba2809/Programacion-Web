@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8.3</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+</head>
+<body>
+    <header class="headerP">
+        Ejercicio 8.3<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 8/Ejercicios/Ejercicio 8-2.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/JavaScript/Capitulo 8/Ejercicios/Ejercicio 8-4.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <h3>
+            Encuentre el error en cada uno de los siguientes segementos de código, y explique cómo corregirlo:
+        </h3>
+        <ol class="boxContent" type="a">
+            <div class="oracion">
+                <li>
+                    x = 1; <br>
+                    <b>while</b> ( x <= 10 ); <br>
+                    &emsp;&emsp;++x; <br>
+                    }
+                </li>
+                <p class="respuesta">
+                    Necesita la llave que abre '{', se reemplaza por el ';' después del while: <br>
+                    x = 1; <br>
+                    <b>while</b> ( x <= 10 ){ <br>
+                    &emsp;&emsp;++x; <br>
+                    }
+                </p>
+            </div>
+            <div class="oracion">
+                <li>
+                    <b>switch</b> ( n )<br>
+                    { <br>
+                    &emsp;&emsp;<b>case 1</b>: <br>
+                    &emsp;&emsp;&emsp;document.writeln("El número es 1"); <br>
+                    &emsp;&emsp;<b>case 2</b>: <br>
+                    &emsp;&emsp;&emsp;document.writeln("El número es 2"); <br>
+                    &emsp;&emsp;&emsp;<b>break;</b> <br>
+                    &emsp;&emsp;<b>default</b>: <br>
+                    &emsp;&emsp;&emsp;document.writeln("El número no es 1 ni 2"); <br>
+                    &emsp;&emsp;&emsp;<b>break;</b> <br>
+                    }
+                </li>
+                <p class="respuesta">
+                    Falta un <em>break</em> en el primer <em>case</em> par que el <em>case 2</em> no se ejecute siempre cuando lo haga en 1: <br>
+                    <b>switch</b> ( n )<br>
+                    { <br>
+                    &emsp;&emsp;<b>case 1</b>: <br>
+                    &emsp;&emsp;&emsp;document.writeln("El número es 1"); <br>
+                    &emsp;&emsp;&emsp;<b>break;</b> <br>
+                    &emsp;&emsp;<b>case 2</b>: <br>
+                    &emsp;&emsp;&emsp;document.writeln("El número es 2"); <br>
+                    &emsp;&emsp;&emsp;<b>break;</b> <br>
+                    &emsp;&emsp;<b>default</b>: <br>
+                    &emsp;&emsp;&emsp;document.writeln("El número no es 1 ni 2"); <br>
+                    &emsp;&emsp;&emsp;<b>break;</b> <br>
+                    }
+                </p>
+            </div>
+            <div class="oracion">
+                <li>
+                    El siguiente código debe imprimir los valores 1 al 10: <br>
+                    n = 1; <br>
+                    <b>while</b> ( n < 10 ) <br>
+                    &emsp;&emsp;document.writeln( n++ );
+                </li>
+                <p class="respuesta">
+                    No imprimirá el número 10, la condición debe de ser con '<=': <br>
+                    n = 1; <br>
+                    <b>while</b> ( n <= 10 ) <br>
+                    &emsp;&emsp;document.writeln( n++ );
+                </p>
+            </div>
+        </ol>
+    </div>
+</body>
+</html>

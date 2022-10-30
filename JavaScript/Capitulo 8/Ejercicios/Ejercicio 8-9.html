@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8.9</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+</head>
+<body>
+    <header class="headerP">
+        Ejercicio 8.9<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 8/Ejercicios/Ejercicio 8-8.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/JavaScript/Capitulo 8/Ejercicios/Ejercicio 8-10.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <h3>
+            Una aplicación interesante de las computadoras es dibujar gráficos convencionales y de barra (también llamados histogramas). Escriba una secuencia de comandos que lea cinco números entre 1 y 30. Por cada número imprima texto en HTML5 que muestre una línea que contenga el mismo número de astericos adyacentes. Por ejemplo, si su programa lee el número 7, debe producir texto en HTMl5 que muestre *******.
+        </h3>
+
+        <div class="boxContent">
+            <script>
+                let validar = /[0-9]/;
+                let numero, asteriscos;
+                
+                for(let i = 1; i <= 5; i++){
+                    asteriscos = "";
+
+                    numero = window.prompt("Introduzca un número, del 1 al 30", "0");
+                    
+                    if(validar.test(numero) && (parseInt(numero) > 0 && parseInt(numero) < 31)){
+                        
+                        for(let i = 1; i <= parseInt(numero); i++) asteriscos += "*";
+                        
+                        document.writeln("<p>Numero " + numero + ": " + asteriscos + "</p>");
+                    }
+                    else{
+                        document.writeln("Introduzca un valor válido.");
+                        break;
+                    }
+                    
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>

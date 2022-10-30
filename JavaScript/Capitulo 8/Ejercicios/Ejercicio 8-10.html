@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8.10</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+    <style type="text/css">
+        .multicolumna {
+            /* establecer el número de columnas en 3 */
+            -webkit-column-count: 2;
+            -moz-column-count: 2;
+            -o-column-count: 2;
+            column-count: 2;
+            /* establecer el espacio entre columnas en 30px */
+            -webkit-column-gap: 30px;
+            -moz-column-gap: 30px;
+            -o-column-gap: 30px;
+            column-gap: 30px;
+            /* agregar una línea negra de 1px entre cada columna */
+            -webkit-column-rule: 1px outset black;
+            -moz-column-rule: 1px outset black;
+            -o-column-rule: 1px outset black;
+            column-rule: 1px outset black;
+        }
+    </style>
+
+</head>
+<body>
+    <header class="headerP">
+        Ejercicio 8.10<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 8/Ejercicios/Ejercicio 8-9.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/JavaScript/Capitulo 8/Ejercicios/Ejercicio 8-11.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <h3>
+            (<em>Canción "Los Doce Días de Navidad"</em>) Escriba una secuencia de comandos que utilice estructuras de repetición y un <em>switch</em> para imprimir la canción "<em>Los Doce Días de Navidad</em>". Encontrarás las palabras en el sitio <em>http://en.wikipedia.org/wiki/The_Twelve_Days_of_Christmas_(song)</em>.
+        </h3>
+
+        <div class="boxContent multicolumna">
+            <center>
+                <script>
+                    let newgift, day;
+                    for(let i = 1; i <= 12; i++){
+                        switch(i){
+                            case 1:
+                                day = "first";
+                                newgift = "A partridge in a pear tree. <br>";
+                                break;
+                            case 2:
+                                day = "fecond";
+                                newgift = "Two turtle doves, and<br>" + newgift;
+                                break;
+                            case 3:
+                                day = "third";
+                                newgift = "Three French hens,<br>" + newgift;
+                                break;
+                            case 4:
+                                day = "fourth";
+                                newgift = "Four colley birds,<br>" + newgift;
+                                break;
+                            case 5:
+                                day = "fifth";
+                                newgift = "Five gold rings, <br>" + newgift;
+                                break;
+                            case 6:
+                                day = "fixth";
+                                newgift = "Six geefe a laying, <br>" + newgift;
+                                break;
+                            case 7:
+                                day = "feventh";
+                                newgift = "Seven fwans a fwimming, <br>" + newgift;
+                                break;
+                            case 8:
+                                day = "eighth";
+                                newgift = "Eight maids a milking, <br>" + newgift;
+                                break;
+                            case 9:
+                                day = "ningth";
+                                newgift = "Nine drummers drumming, <br>" + newgift;
+                                break;
+                            case 10:
+                                day = "tenth";
+                                newgift = "Ten pipers piping, <br>" + newgift;
+                                break;
+                            case 11:
+                                day = "eleventh";
+                                newgift = "Eleven ladies dancing, <br>" + newgift;
+                                break;
+                            case 12:
+                                day = "twelfth";
+                                newgift = "Twelve lords a leaping, <br>" + newgift;
+                                break;
+                        }
+
+                        document.writeln("<p>The " + day + " day of Chrisftmas, <br>My true love fent to me <br>" + newgift);
+                    }
+                </script>
+            </center>
+        </div>
+    </div>
+</body>
+</html>
