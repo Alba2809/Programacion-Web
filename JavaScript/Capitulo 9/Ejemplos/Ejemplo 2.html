@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<!-- Fiig. 9.3: maximo.html -->
+<!-- Función máximo definida por el programador. -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máximo de tres valores</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+    <style type="text/css">
+        p { margin: 0; }
+    </style>
+
+</head>
+<body>
+    <header class="headerP">
+        Ejemplo 9.2<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 9/Ejemplos/Ejemplo 1.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/JavaScript/Capitulo 9/Ejemplos/Ejemplo 3.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <script>
+
+            var entrada1 = window.prompt("Escriba el primer número", "0");
+            var entrada2 = window.prompt("Escriba el segundo número", "0");
+            var entrada3 = window.prompt("Escriba el tercer número", "0");
+
+            var valor1 =parseFloat( entrada1 );
+            var valor2 =parseFloat( entrada2 );
+            var valor3 =parseFloat( entrada3 );
+
+            var valorMax = maximo(valor1, valor2, valor3);
+
+            document.writeln("<p>Primer número: " + valor1 + "</p>" + "<p>Segundo número: " + valor2 + "</p>" + "<p>Tercer número: " + valor3 + "</p>" + "<p>El máximo es: " + valorMax + "</p>");
+
+            //definición de la función maximo (se llama desde la línea 42)
+            function maximo( x, y, z ){
+                return Math.max( x, Math.max( y, z ) );
+            } //fin de la función maximo
+
+        </script>
+    </div>
+</body>
+</html>

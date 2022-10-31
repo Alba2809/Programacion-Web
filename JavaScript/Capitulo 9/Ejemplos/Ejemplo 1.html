@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<!-- Fig. 9.2: CuadradoEnt.html -->
+<!-- Función cuadrado definida por el programador. -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una función cuadrado definida por el programador</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+    <style type="text/css">
+        p{ margin: 0; }
+    </style>
+
+</head>
+<body>
+    <header class="headerP">
+        Ejemplo 9.1<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/JavaScript/Capitulo 9/Ejemplos/Ejemplo 2.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <script>
+
+            document.writeln("<h1>Obtener el cuadrado de los números del 1 al 10</h1>");
+
+            //obtener el cuadrado de los números del 1 al 10
+            for ( var x = 1; x <= 10; ++x )
+                document.writeln("<p>El cuadrado de " + x + " es " + cuadrado( x ) + "</p>");
+
+            //El cuerpo de la siguiente definición de la función cuadrado se ejecuta
+            //sólo cuando la función se llama de manera explícita como en la línea 19
+            function cuadrado( y ){
+                return y * y;
+            } //fin de la función cuadrado
+
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<!-- Fig. 9.4: EntAleatorio.html -->
+<!-- Enteros aleatorios, desplazar y escalar. -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desplazar y escalar enteros aleatorios</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+    <style type="text/css">
+        p, ol { margin: 0; }
+        li { display: inline; margin-right: 10px; }
+    </style>
+
+</head>
+<body>
+    <header class="headerP">
+        Ejemplo 9.3<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 9/Ejemplos/Ejemplo 2.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/JavaScript/Capitulo 9/Ejemplos/Ejemplo 4.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <script>
+
+            var valor;
+
+            document.writeln("<p>Números aleatorios</p><ol>");
+
+            for( var i = 1; i <= 30; ++i ){
+                valor = Math.floor( 1 + Math.random() * 6 );
+                document.writeln("<li>" + valor + "</li>");
+            } //fin del for
+
+            document.writeln("</ol>");
+
+        </script>
+    </div>
+</body>
+</html>
