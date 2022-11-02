@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.7</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+    <script>
+
+        function iniciar(){
+            let boton = document.getElementById("botonCalcular");
+            let campoRadio = document.getElementById("campoRadio");
+            let resultado = document.getElementById("resultado");
+
+            boton.addEventListener("click", areaCirculo, false);
+        }
+
+        function areaCirculo(){
+            let area = Math.PI * Math.pow(parseFloat(campoRadio.value), 2);
+
+            resultado.innerHTML = "El área es: " + area;
+        }
+
+        window.addEventListener("load", iniciar, false);
+
+    </script>
+
+</head>
+<body>
+    <header class="headerP">
+        Ejercicio 9.7<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 9/Ejercicios/Ejercicio 9-6.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/JavaScript/Capitulo 9/Ejercicios/Ejercicio 9-8.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <h3>
+            Escriba una secuencia de comandos que use un formulario <em>(form)</em> para obtener el radio de un círculo del usuario y después llame a la función <em>areaCirculo</em> para calcular el área del círculo y mostrar el resultado en un párrafo en la página.
+        </h3>
+
+        <div class="boxContent">
+            <form action="#">
+                <input type="number" name="Radio" id="campoRadio">
+                <input type="button" value="Calcular área" id="botonCalcular">
+            </form>
+            <p id="resultado"></p>
+        </div>
+    </div>
+</body>
+</html>

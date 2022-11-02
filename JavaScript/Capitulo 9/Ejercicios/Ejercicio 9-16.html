@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.16</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+    <script>
+
+        function iniciar(){
+            let numeroS = window.prompt("Ingrese un numero entero [1 al 99999]", "1");
+
+            let resultado = document.getElementById("resultado");
+
+            validar(numeroS);
+        }
+
+        function validar(numS){
+            if(Number.isInteger(parseInt(numS)) && (parseInt(numS) >= 1 && parseInt(numS) <= 99999)) 
+                mostrarDigitos(numS);
+            else
+                window.alert("Ingrese un valor válido.");
+        }
+
+        function mostrarDigitos(numero){
+            let numeroEntero = parseInt(numero);
+            let temp = 0, div = 1;
+            for(let i = 1; i < numero.length; i++) 
+                div *= 10;
+                
+            for(let i = 1; i <= numero.length; i++){
+                
+                if( i == 1 ){
+                    temp = parseInt(numeroEntero / div);
+                    div /= 10;
+                }
+                else if(i == numero.length) 
+                    temp = parseInt(numeroEntero % 10);
+                else{
+                    temp = parseInt((numeroEntero / div) % 10);
+                    div /= 10;
+                }
+                
+                resultado.innerHTML += temp + "  ";
+            }
+            
+        }
+
+        window.addEventListener("load", iniciar, false);
+    </script>
+
+</head>
+<body>
+    <header class="headerP">
+        Ejercicio 9.16<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 9/Ejercicios/Ejercicio 9-15.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/JavaScript/Capitulo 9/Ejercicios"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <h3>
+            Escriba segmentos de programa que realicen cada una de las siguientes tareas:
+        </h3>
+        <ol class="boxContent" type="a">
+            <div class="oracion">
+                <li>
+                    Calcule la parte entera del cociente cuando el entero a se divide entre el entero b.
+                </li>
+                <p class="respuesta">
+                    a = parseInt( a ); <br>
+                    b = parseInt( b ); <br>
+                    cociente = parseInt(a / b);
+                </p>
+            </div>
+            <div class="oracion">
+                <li>
+                    Calcule el residuo entero cuando el entero a se divide entre el entero b.
+                </li>
+                <p class="respuesta">
+                    a = parseInt( a ); <br>
+                    b = parseInt( b ); <br>
+                    residuo = parseInt(a % b);
+                </p>
+            </div>
+            <div class="oracion">
+                <li>
+                    Use las piezas de programa que se desarrollaron en las partes <em>(a) y (b)</em> para escribir una función llamada <em>mostrarDigitos</em> que reciba un entero entre 1 y 99999, para luego imprimirlo como una serie de dígitos, de los cuales cada par se separa mediante dos espacios. Por ejemplo, el entero 4562 debería imprimirse como: 4  5  6  2.
+                </li>
+                <p class="respuesta">
+
+                    <b>function</b> mostrarDigitos(numero){ <br>
+                        &emsp;&emsp;let numeroEntero = parseInt(numero); <br>
+                        &emsp;&emsp;let temp = 0, div = 1; <br>
+                        &emsp;&emsp;if(numeroEntero >= 1 && numeroEntero <= 99999){ <br> <br>
+
+                        &emsp;&emsp;&emsp;&emsp;for(let i = 1; i < numero.length; i++) div *= 10; <br><br>
+                        
+                        &emsp;&emsp;&emsp;&emsp;for(let i = 1; i <= numero.length; i++){ <br><br>
+                            
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;if( i == 1 ){ <br>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;temp = parseInt(numeroEntero / div); <br>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;div /= 10; <br>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;} <br>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;else if(i == numero.length)  <br>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;temp = parseInt(numeroEntero % 10); <br>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;else{ <br>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;temp = parseInt((numeroEntero / div) % 10); <br>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;div /= 10; <br>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;} <br> <br>
+                        
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;document.writeln(temp + "&emsp;&emsp;"); <br>
+                        &emsp;&emsp;&emsp;&emsp;} <br>
+                        &emsp;&emsp;} <br>
+                    }
+                </p>
+            </div>
+            <div class="oracion">
+                <li>
+                    Incorpore la función desarrollada en la parte (c) en una secuencia de comandos que reciba un entero de un diálogo <em>prompt</em> e invoque <em>mostrarDigitos</em> para pasar a la función del entero introducido.
+                </li>
+                <p class="respuesta" id="resultado"></p>
+            </div>
+        </ol>
+    </div>
+</body>
+</html>

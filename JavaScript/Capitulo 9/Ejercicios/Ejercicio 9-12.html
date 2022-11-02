@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.12</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+    <script>
+        function iniciar(){
+            let botonA = document.getElementById("botonA");
+            let botonB = document.getElementById("botonB");
+            let botonC = document.getElementById("botonC");
+
+            let resA = document.getElementById("resA");
+            let resB = document.getElementById("resB");
+            let resC = document.getElementById("resC");
+
+            botonA.addEventListener("click", numeroA, false);
+            botonB.addEventListener("click", numeroB, false);
+            botonC.addEventListener("click", numeroC, false);
+        }
+
+        function numeroA(){
+            resA.innerHTML = "Numero &rArr; " + (Math.floor((Math.random() * (10 - 2 + 1) + 2) / 2) * 2);
+        }
+        
+        function numeroB(){
+            resB.innerHTML = "Numero &rArr; " + (Math.floor((Math.random() * (10 - 2 + 1) + 2) / 2) * 2 + 1);
+        }
+
+        function numeroC(){
+            resC.innerHTML = "Numero &rArr; " + (Math.ceil((Math.random() * (22 - 6 + 1) + 6) / 4) * 4 - 2);
+        }
+
+        window.addEventListener("load", iniciar, false);
+    </script>
+
+</head>
+<body>
+    <header class="headerP">
+        Ejercicio 9.12<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 9/Ejercicios/Ejercicio 9-11.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/JavaScript/Capitulo 9/Ejercicios/Ejercicio 9-13.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <h3>
+            Para cada uno de los siguientes conjuntos de enteros, escriba una sola instrucción que imprima un número al azar del conjunto:
+        </h3>
+
+        <!-- 
+            Math.random() * (max - min) + min; not included max 
+            Math.random() * (max - min + 1) + min; included max
+        -->
+
+        <ol class="boxContent" type="a">
+            <div class="oracion">
+                <li>2, 4, 6, 8, 10.</li>
+                <p class="respuesta">
+                    n = Math.floor((Math.random() * (10 - 2 + 1) + 2) / 2) * 2; <br>
+                    
+                </p>
+                
+            </div>
+            
+            <input type="button" value="Número" id="botonA">
+            <p id="resA"></p>
+
+            <div class="oracion">
+                <li>3, 5, 7, 9, 11.</li>
+                <p class="respuesta">
+                    n = Math.floor((Math.random() * (10 - 2 + 1) + 2) / 2) * 2 + 1;
+                </p>
+            </div>
+            
+            <input type="button" value="Número" id="botonB">
+            <p id="resB"></p>
+            
+            <div class="oracion">
+                <li>6, 10, 14, 18, 22.</li>
+                <p class="respuesta">
+                    n = Math.ceil((Math.random() * (22 - 6 + 1) + 6) / 4) * 4 - 2;
+                </p>
+            </div>
+            
+            <input type="button" value="Número" id="botonC">
+            <p id="resC"></p>
+        </ol>
+    </div>
+</body>
+</html>

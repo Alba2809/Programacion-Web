@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.8</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+    <script>
+
+        function iniciar(){
+            let boton = document.getElementById("calcular");
+            let campoHoras = document.getElementById("campoHoras");
+            let resultado = document.getElementById("resultado");
+            let resultado2 = document.getElementById("resultado2");
+
+            boton.addEventListener("click", validarHoras, false);
+        }
+
+        function validarHoras(){
+            let horas = parseFloat(campoHoras.value);
+            if(horas <= 0 || horas > 24 || isNaN(horas))
+                window.alert("Ingrese una hora entre 1 y 24.");
+            else
+                calcularCargos(horas);
+            
+        }
+
+        let total = 0;
+
+        function calcularCargos(hrs){
+            let cargo_cliente = 0;
+
+            switch (true) {
+                case hrs <= 3:
+                    cargo_cliente = 2;
+                    break;
+                case hrs >= 24:
+                    cargo_cliente = 10;
+                    break;
+                case hrs > 3 && hrs < 24: 
+                    if(Number.isInteger(hrs))
+                        cargo_cliente = ((parseInt(hrs) - 3) * 0.5) + 2; 
+                    else
+                        cargo_cliente = ((parseInt(hrs) - 3) * 0.5) + 2.5;
+                    break;
+            }
+
+            total += cargo_cliente;
+            
+            mostrarResultados(cargo_cliente, hrs, total);
+        }
+
+        function mostrarResultados(cargoC, hrs_c, t){
+            resultado.innerText += "El cargo del cliente [" + hrs_c +" hrs.] es: $" + cargoC + "\n";
+            resultado2.innerText = "El total de los recibos: " + t;
+        }
+
+        window.addEventListener("load", iniciar, false);
+    </script>
+
+</head>
+<body>
+    <header class="headerP">
+        Ejercicio 9.8<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 9/Ejercicios/Ejercicio 9-7.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/JavaScript/Capitulo 9/Ejercicios/Ejercicio 9-9.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <h3>
+            Un estacionamiento cobra una cuota mínima de &dollar;2 por estacionarse hasta tres horas. El estacionamiento cobra &dollar;0.50 adicionales por cada hora o <em>fracción</em> que exceda las tres horas. El cargo máximo por un periodo de 24 horas es de &dollar;10.00. Suponga que no hay autos que se estacionen por más de 24 horas a la vez. Escriba una secuencia de comandos que calcule y muestre los cargos de estacionamiento por cada cliente que haya estacionado su auto en este lote ayer. Debe usar un elemento <em>form</em> para recibir del usuario las horas que se estacionó cada cliente. El programa debe mostrar el cargo debe mostrar el cargo para el cliente actual; además debe calcular y mostrar el total corriente de los recibos de ayer. El programa debe usar la función <em>calcularCargos</em> para determinar el cargo para cada cliente.
+        </h3>
+
+        <div class="boxContent">
+            <form action="#">
+                <input type="number" name="Horas" id="campoHoras" placeholder="Hrs" style="width: 50px;">
+                <input type="button" value="Calcular cargo" id="calcular">
+            </form>
+            <p id="resultado"></p>
+            <p id="resultado2"></p>
+        </div>
+
+    </div>
+</body>
+</html>

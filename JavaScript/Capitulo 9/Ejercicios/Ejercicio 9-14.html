@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.14</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+    <style type="text/css">
+        input[type=number] { width: 80px; }
+    </style>
+
+    <script>
+        function iniciar(){
+            let boton = document.getElementById("calcular");
+            let campoUno = document.getElementById("campoUno");
+            let campoDos = document.getElementById("campoDos");
+            let resultado = document.getElementById("resultado");
+
+            boton.addEventListener("click", mostrar, false);
+        }
+
+        function mostrar(){
+            let num1 = parseInt(campoUno.value);
+            let num2 = parseInt(campoDos.value);
+            
+            (multiplo(num1, num2)) ? 
+                resultado.innerHTML = num2 + " es múltiplo de " + num1 :
+                resultado.innerHTML = num2 + " no es múltiplo de " + num1;
+        }
+
+        function multiplo(num_1, num_2){
+            return num_2 % num_1 == 0 ? true : false;
+        }
+
+        window.addEventListener("load", iniciar, false);
+
+    </script>
+
+</head>
+<body>
+    <header class="headerP">
+        Ejercicio 9.14<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 9/Ejercicios/Ejercicio 9-13.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/JavaScript/Capitulo 9/Ejercicios/Ejercicio 9-15.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <h3>
+            Escriba una función llamada <em>multiplo</em> que determine para un par de enteros si el segundo es múltiplo del primero. La función debe recibir dos argumentos enteros y devolver <em>true</em> si el segundo es múltiplo del primero, y <em>false</em> en caso contrario. Incorpore esta función en una secuencia de comandos que reciba como entrada una serie de pares de enteros (un par a la vez). El formulario de HTML5 debe consistir en dos campos de texto y un botón par iniciar el cálculo.
+        </h3>
+        <div class="boxContent">
+            <form action="#">
+                <input type="number" name="Primer numero" id="campoUno" placeholder="Primero">
+                <input type="number" name="Segundo numero" id="campoDos" placeholder="Segundo">
+                <input type="button" value="Calcular" id="calcular">
+            </form>
+            <p id="resultado"></p>
+        </div>
+    </div>
+</body>
+</html>
