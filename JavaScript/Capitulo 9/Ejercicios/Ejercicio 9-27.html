@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.27</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+    <script>
+        let numeros = [], resp, aciertos = 0, inc = 0, contador = 0, primera = true;
+        let boton, botonR, botonEstablecer, tipoSelec;
+        let max_numero = 9, max_pregunta = 1, min_pregunta = 1; //para restringir el tipo de problemas y digitos
+
+        function iniciar(){
+            boton = document.getElementById("botonResponder");
+            botonR = document.getElementById("botonReiniciar");
+            botonEstablecer = document.getElementById("botonEstablecer");
+
+            let campoRes = document.getElementById("campoRes");
+            let mensajeR = document.getElementById("mensajeR");
+            let preguntaTexto = document.getElementById("preguntaTexto");
+            let correctos = document.getElementById("correctos");
+            let incorrectos = document.getElementById("incorrectos");
+            let mensajeFinal = document.getElementById("mensajeFinal");
+
+            let campoDigitos = document.getElementById("campoDigitos");
+            
+            validar();
+
+            boton.addEventListener("click", validar, false);
+            botonR.addEventListener("click", reinicar, false);
+            botonEstablecer.addEventListener("click", guardarCambios, false);
+        }
+
+        function guardarCambios(){
+            let digitos_ingresados = parseInt(campoDigitos.value);
+            if(verificarDigitos(digitos_ingresados))
+                window.alert("Ingrese una cantidad de dígitos válida.");
+            else{
+                max_numero = multiplicarDiez(digitos_ingresados) - 1;
+                tipoSelec = seleccionado();
+                
+                if(tipoSelec.value == 5){
+                    max_pregunta = 4;
+                    min_pregunta = 1;
+                }
+                else if(tipoSelec.value == 1){
+                    max_pregunta = 1;
+                    min_pregunta = 1;
+                }
+                else if(tipoSelec.value == 2){
+                    max_pregunta = 2;
+                    min_pregunta = 2;
+                }
+                else if(tipoSelec.value == 3){
+                    max_pregunta = 3;
+                    min_pregunta = 3;
+                }
+                else if(tipoSelec.value == 4){
+                    max_pregunta = 4;
+                    min_pregunta = 4;
+                }
+                
+                reinicar();
+            }
+        }
+
+        function seleccionado(){
+            for(let i = 1; i <= 5; i++){
+                if(document.getElementById("tipo"+i).checked){
+                    return document.getElementById("tipo"+i);
+                }
+            }
+        }
+
+        function multiplicarDiez(numero){
+            let total = 1;
+            for(let i = 0; i < numero; i++)
+                total *= 10;
+            return total;
+        }
+
+        function verificarDigitos(numero_digitos){
+            return numero_digitos <= 0 ? true : false;
+        }
+
+        function reinicar(){
+            boton.disabled = false;
+            //boton.hidden = false;
+            botonR.disabled = true;
+            //botonR.hidden = true;
+            aciertos = 0;
+            inc = 0;
+            contador = 0;
+            mensajeFinal.innerHTML = "";
+            mensajeR.innerHTML = "";
+            correctos.innerHTML = "Respuestas correctas: " + aciertos;
+            incorrectos.innerHTML = "Respuestas incorrectas: " + inc;
+            campoRes.value = "";
+            generar();
+        }
+
+        function validar(){
+            if(primera)
+                generar();
+            else if(contador == 10){
+                if(10 * aciertos < 75 || aciertos == 0){
+                    mensajeFinal.innerHTML = "Ha respondido 10 preguntas. <br>Pida ayuda adicional a su instructor.";
+                    campoRes.value = "";
+                    boton.disabled = true;
+                    botonR.disabled = false;
+                }else{
+                    mensajeFinal.innerHTML = "Ha respondido 10 preguntas.";
+                    campoRes.value = "";
+                    boton.disabled = true;
+                    botonR.disabled = false;
+                }
+                
+            }
+            else{
+                if(parseFloat(resp).toFixed(2) == parseFloat(campoRes.value).toFixed(2)){
+                    mensajeR.innerHTML = respCorrectas();
+                    aciertos++;
+                    contador++;
+                    correctos.innerHTML = "Respuestas correctas: " + aciertos;
+                    campoRes.value = "";
+                    generar();
+                }else{ 
+                    mensajeR.innerHTML = respIncorrectas();
+                    inc++;
+                    contador++;
+                    incorrectos.innerHTML = "Respuestas incorrectas: " + inc;
+                    campoRes.value = "";
+                    generar();
+                }
+            }
+        }
+
+        function respCorrectas(){
+            let selec = Math.floor(Math.random() * (4 - 1 + 1) + 1 );
+            switch(selec){
+                case 1:
+                    return "Muy bien.";
+                case 2:
+                    return "Excelente.";
+                case 3:
+                    return "Buen trabajo.";
+                case 4:
+                    return "Siga así.";
+            }
+        }
+        function respIncorrectas(){
+            let selec = Math.floor(Math.random() * (4 - 1 + 1) + 1 );
+            switch(selec){
+                case 1:
+                    return "No. Intente de nuevo.";
+                case 2:
+                    return "Equivocado. Trate una vez más.";
+                case 3:
+                    return "No se dé provencido.";
+                case 4:
+                    return "No. Siga intentando.";
+            }
+        }
+
+        function generar(){
+            numeros.shift();
+            numeros.shift();
+            numeros.shift();
+            
+            numeros.push(Math.floor(Math.random() * (max_numero - 1 + 1) + 1 )); //primer número
+            
+            numeros.push(Math.floor(Math.random() * (max_numero - 1 + 1) + 1 )); //segundo número
+            
+            numeros.push(Math.floor(Math.random() * (max_pregunta - min_pregunta + 1) + min_pregunta )); //pregunta
+            
+            switch(numeros[2]){
+                case 1://pregunta de suma
+                    //document.writeln("Pregunta 1");
+                    preguntaTexto.innerHTML = "¿Cuánto es " + numeros[0] + " más " + numeros[1] + "?";
+                    resp = numeros[0] + numeros[1];
+                    break;
+                case 2://pregunta de resta
+                    //document.writeln("Pregunta 2");
+                    preguntaTexto.innerHTML = "¿Cuánto es " + numeros[0] + " menos " + numeros[1] + "?";
+                    resp = numeros[0] - numeros[1];
+                    break;
+                case 3://pregunta de producto
+                    //document.writeln("Pregunta 3");
+                    preguntaTexto.innerHTML = "¿Cuánto es " + numeros[0] + " por " + numeros[1] + "?";
+                    resp = numeros[0] * numeros[1];
+                    break;
+                case 4://pregunta de división
+                    //document.writeln("Pregunta 4");
+                    preguntaTexto.innerHTML = "¿Cuánto es " + numeros[0] + " entre " + numeros[1] + "?";
+                    resp = numeros[0] / numeros[1];
+                    break;
+            }
+            primera = false;
+        }
+
+        window.addEventListener("load", iniciar, false);
+    </script>
+
+</head>
+<body>
+    <header class="headerP">
+        Ejercicio 9.27<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 9/Ejercicios/Ejercicio 9-26.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/JavaScript/Capitulo 9/Ejercicios/Ejercicio 9-28.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <h3>
+            <em>(Proyecto)</em> Los ejercicios 9.22 al 9.24 desarrollaron un programa de instrucción asistida por computadora para enseñar a un estudiante de primaria a multiplicar. Este ejercicio sugiere mejoras a ese programa. <br>
+            a) Modifique el programa para que permita al usuario introducir la capacidad de nivel de grado. Un nivel de grado de 1 significa que usa dígitos de un solo número en los problemas, un nivel de grado 2 significa que usa números de hasta dos dígitos, y así en lo sucesivo. <br>
+            b) Modifique el programa para permitir al usuario elegir el tipo de problemas aritméticos que sea estudiar. Una opción de 1 significa sólo problemas de suma, 2 significa sólo problemas de resta, 3 significa sólo problemas de multiplicación, 4 significa sólo problemas de división y 5 significa entremezclar al azar problemas de todos estos tipos.
+        </h3>
+        <div class="boxContent2">
+            <div class="boxContent3">
+                <form action="#">
+                    <p id="preguntaTexto"></p>
+                    
+                    <input type="number" name="Respuesta" id="campoRes">
+                    <input type="button" value="Responder" id="botonResponder">
+                    
+                    
+                </form>
+                <p id="mensajeR"></p>
+    
+                <p id="correctos">Respuestas correctas: 0</p>
+                <p id="incorrectos">Respuestas incorrectas: 0</p>
+    
+                <h3 id="mensajeFinal"></h3>
+                <input type="button" value="Reiniciar" id="botonReiniciar" disabled>
+            </div>
+            <div class="boxContent3">
+                <form action="#">
+                    <p>Eliga el tipo de problemas:</p>
+                    <label>
+                        <input type="radio" name="tipo" value="1" id="tipo1" checked >
+                        Suma
+                    </label> <br>
+                    <label>
+                        <input type="radio" name="tipo" value="2" id="tipo2">
+                        Resta
+                    </label> <br>
+                    <label>
+                        <input type="radio" name="tipo" value="3" id="tipo3">
+                        Multiplicación
+                    </label> <br>
+                    <label>
+                        <input type="radio" name="tipo" value="4" id="tipo4">
+                        División
+                    </label> <br>
+                    <label>
+                        <input type="radio" name="tipo" value="5" id="tipo5">
+                        Azar
+                    </label>
+                    <p>Ingrese la cantidad de dígitos:</p>
+                    <input type="number" name="Digitos" id="campoDigitos" value="1"> <br><br>
+                    <input type="button" value="Guardar Cambios" id="botonEstablecer">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

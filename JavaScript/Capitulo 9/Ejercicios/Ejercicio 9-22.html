@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.22</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+    <script>
+        let numeros = [], resp, aciertos = 0, primera = true;
+
+        function iniciar(){
+            let boton = document.getElementById("botonResponder");
+            let campoRes = document.getElementById("campoRes");
+            let mensajeR = document.getElementById("mensajeR");
+            let preguntaTexto = document.getElementById("preguntaTexto");
+            let correctos = document.getElementById("correctos");
+            
+            validar();
+
+            boton.addEventListener("click", validar, false);
+        }
+
+        function validar(){
+            if(primera)
+                generar();
+            else{
+                if(parseFloat(resp).toFixed(2) == parseFloat(campoRes.value).toFixed(2)){
+                    mensajeR.innerHTML = "Muy bien.";
+                    aciertos++;
+                    correctos.innerHTML = "Respuestas correctas: " + aciertos;
+                    generar();
+                }else mensajeR.innerHTML = "No. Intente de nuevo.";
+            }
+        }
+
+        function generar(){
+            numeros.shift();
+            numeros.shift();
+            numeros.shift();
+            numeros.push(Math.floor(Math.random() * (9 - 1 + 1) + 1 )); //primer número
+            numeros.push(Math.floor(Math.random() * (9 - 1 + 1) + 1 )); //segundo número
+            numeros.push(Math.floor(Math.random() * (4 - 1 + 1) + 1 )); //pregunta
+
+            switch(numeros[2]){
+                case 1://pregunta de suma
+                    //document.writeln("Pregunta 1");
+                    preguntaTexto.innerHTML = "¿Cuánto es " + numeros[0] + " más " + numeros[1] + "?";
+                    resp = numeros[0] + numeros[1];
+                    break;
+                case 2://pregunta de resta
+                    //document.writeln("Pregunta 2");
+                    preguntaTexto.innerHTML = "¿Cuánto es " + numeros[0] + " menos " + numeros[1] + "?";
+                    resp = numeros[0] - numeros[1];
+                    break;
+                case 3://pregunta de producto
+                    //document.writeln("Pregunta 3");
+                    preguntaTexto.innerHTML = "¿Cuánto es " + numeros[0] + " por " + numeros[1] + "?";
+                    resp = numeros[0] * numeros[1];
+                    break;
+                case 4://pregunta de división
+                    //document.writeln("Pregunta 4");
+                    preguntaTexto.innerHTML = "¿Cuánto es " + numeros[0] + " entre " + numeros[1] + "?";
+                    resp = numeros[0] / numeros[1];
+                    break;
+            }
+            primera = false;
+        }
+
+        window.addEventListener("load", iniciar, false);
+    </script>
+
+</head>
+<body>
+    <header class="headerP">
+        Ejercicio 9.22<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 9/Ejercicios/Ejercicio 9-21.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/JavaScript/Capitulo 9/Ejercicios/Ejercicio 9-23.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <h3>
+            Las computadoras desempeñan un papel cada vez mayor en la educación. Escriba un programa que ayude a un estudiante de primaria para que aprenda a multiplicar. Use <em>Math.random</em> para producir dos enteros positivos de un dígito. Después deberá mostrar una pregunta tal como <br><em>¿Cuánto es 6 por 7?</em><br>
+            A continuación, el estudiante escribirá la respuesta en un campo de texto. Su programa deberá verificar la respuesta del estudiante. Si es correcta, muestre la cadena <em>"Muy bien."</em> y genere una nueva pregunta. Si la respuesta es equivocada, muestre la cadena <em>"No. Intente de nuevo."</em> y deje que el estudiante intente la misma pregunta otra vez en forma repetida, hasta que por fin la saque bien. Deberá usarse una función separada para generar cada pregunta nueva. Esta función deberá llamarse una vez cuando la secuencia de comandos empiece su ejecución y cada vez que el usuario responda de manera correcta a la pregunta.
+        </h3>
+        <div class="boxContent">
+            <form action="#">
+                <p id="preguntaTexto"></p>
+                
+                <input type="number" name="Respuesta" id="campoRes">
+                <input type="button" value="Responder" id="botonResponder">
+                
+                <p id="mensajeR"></p>
+
+                <p id="correctos">Respuestas correctas: 0</p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.25</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+    <script>
+        let botonAdivinar, botonReiniciar, numero_aleatorio;
+
+        function iniciar(){
+            botonAdivinar = document.getElementById("adivinar");
+            botonReiniciar = document.getElementById("reiniciar");
+            let campoNumero = document.getElementById("campoNumero");
+            let mensajeFinal = document.getElementById("mensajeFinal");
+
+            generarNumero();
+
+            botonAdivinar.addEventListener("click", validar, false);
+            botonReiniciar.addEventListener("click", reload, false);
+        }
+
+        function reload(){
+            botonAdivinar.disabled = false;
+            botonReiniciar.disabled = true;
+            campoNumero.value = "";
+            mensajeFinal.innerHTML = "";
+            generarNumero();
+        }
+
+        function generarNumero(){
+            numero_aleatorio = Math.floor(Math.random() * (1000 - 1 + 1) + 1 );
+            console.log(numero_aleatorio);
+        }
+        function validar(){
+            let numero_usuario = parseInt(campoNumero.value);
+            switch(true){
+                case numero_usuario == numero_aleatorio:
+                    mensajeFinal.innerHTML = "Felicidades. ¡Adivinó el número!";
+                    botonAdivinar.disabled = true;
+                    botonReiniciar.disabled = false;
+                    break;
+                case numero_usuario < numero_aleatorio:
+                    mensajeFinal.innerHTML = "Demasiado Bajo. Intente de nuevo.";
+                    campoNumero.value = "";
+                    break;
+                case numero_usuario > numero_aleatorio:
+                    mensajeFinal.innerHTML = "Demasiado alto. Intente de nuevo.";
+                    campoNumero.value = "";
+                    break;
+                default:
+                    mensajeFinal.innerHTML = "Introduzca un valor válido.";
+                    campoNumero.value = "";
+                    break;
+            }
+        }
+
+        window.addEventListener("load", iniciar, false);
+
+    </script>
+
+</head>
+<body>
+    <header class="headerP">
+        Ejercicio 9.25<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 9/Ejercicios/Ejercicio 9-24.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/JavaScript/Capitulo 9/Ejercicios/Ejercicio 9-26.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <h3>
+            Escriba una secuencia de comandos que juegue a <em>"adivinar el número"</em> de la siguiente manera: su programa debe elegir el número a adivinar, para lo cual se seleccionar un entero aleatorio en el rango de 1 a 1000. La secuencia de comandos muestra el indicador <em>Adivine un número entre 1 y 1000</em> enseguida de un campo de texto. El jugador escribe su primer intento en el campo de texto y hace clic en un botón para enviarlo a la secuencia de comandos. Si el intento del jugador es incorrecto, su programa deberá mostrar los mensajes <em>Demasiado alto. Intente de nuevo.</em> o <em>Demasiado bajo. Intente de nuevo.</em> para ayudar al jugador a <em>"acercarse"</em> a la respuesta correcta y deberá borrar el campo de texto para que el usuario pueda introducir el siguiente intento. Cuando el usuario introduzca la respuesta correcta, muestre el mensaje <em>Felicidades. ¡Adivinó el número!</em> y borre el campo de texto para que el usuario pueda jugar otra vez.
+        </h3>
+        <div class="boxContent">
+            <p>Adivine un número entre 1 y 1000:</p>
+            <form action="#">
+                <input type="number" name="Numero" id="campoNumero">
+                <input type="button" value="Adivinar" id="adivinar">
+                <input type="button" value="Reiniciar" id="reiniciar" disabled>
+            </form>
+            <p id="mensajeFinal"></p>
+        </div>
+    </div>
+</body>
+</html>

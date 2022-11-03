@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.19</title>
+
+    <link rel="stylesheet" href="/CSS3/css/baseStyle.css" type="text/css">
+
+    <script>
+        const numeros = [];
+        function iniciar(){
+            let resultadoB = document.getElementById("resultadoB");
+            let resultadoC = document.getElementById("resultadoC");
+
+            for(let i = 1; i <= 10000; i++){
+                numeros.push(i);
+            }
+
+            let inicio = Date.now();
+            numeros.forEach(numero => {
+                if(esPrimoB(numero)) resultadoB.innerHTML += "" + numero + "\n";
+            });
+            let fin = Date.now();
+            resultadoB.innerHTML += "Tiempo: " + (fin - inicio);
+            
+            inicio = Date.now();
+            numeros.forEach(numero => {
+                if(esPrimoC(numero)) resultadoC.innerHTML += "" + numero + "\n";
+            });
+            fin = Date.now();
+            resultadoC.innerHTML += "Tiempo: " + (fin - inicio);
+        }
+
+        function esPrimoB(numero){
+            if (numero == 0 || numero == 1 || numero == 4)
+                return false;
+            for (let x = 2; x < numero / 2; x++) {
+                if (numero % x == 0) return false;
+            }
+            return true;
+        }
+        function esPrimoC(numero){
+            let raiz = Math.sqrt(numero);
+            if (numero == 0 || numero == 1 || numero == 4)
+                return false;
+            for (let x = 2; x < raiz; x++) {
+                if (numero % x == 0) return false;
+            }
+            return true;
+        }
+
+        window.addEventListener("load", iniciar, false);
+    </script>
+
+</head>
+<body>
+    <header class="headerP">
+        Ejercicio 9.19<br>
+        <p class="nombre">
+            Alba Garc&iacute;a Jos&eacute; Iv&aacute;n
+        </p>
+	<a href="/JavaScript/Capitulo 9/Ejercicios/Ejercicio 9-18.html"><button type="submit">Atras</button></a>
+        <a href="/index.html"><button type="submit">Principal</button></a>
+        <a href="/JavaScript/Capitulo 9/Ejercicios/Ejercicio 9-20.html"><button type="submit">Siguiente</button></a>
+    </header>
+
+    <div class="contenido">
+        <h3>
+            Se dice que un entero es <em>primo</em> si es mayor que 1 y se puede dividir sólo entre 1 y sí mismo. Por ejemplo, 2, 3, 5 y 7 son primos pero 4, 6, 8 y 9 no.
+        </h3>
+        <ol class="boxContent" type="a">
+            <div class="oracion">
+                <li>Escriba una función que determine si un número es primo.</li>
+                <p class="respuesta">
+                    function esPrimo(numero){ <br>
+                    &emsp;if (numero == 0 || numero == 1 || numero == 4) <br>
+                    &emsp;&emsp;return false; <br>
+                    &emsp;for (let x = 2; x < numero / 2; x++) { <br>
+                    &emsp;&emsp;if (numero % x == 0) return false; <br>
+                    &emsp;} <br>
+                    &emsp;return true; <br>
+                    }
+                </p>
+            </div>
+            <div class="oracion">
+                <li>
+                    Use esta función en una secuencia de comandos que determine e imprima todos los números primos entre 1 y 10,000. ¿Cuántos de estos 10,000 números tiene que probar en realidad antes de asegurarse que haya encontrado todos los primos? Muestre los resultados en un elemento &lt;textarea>.
+                </li><br>
+                <textarea name="Primos" id="resultadoB" cols="10" rows="20" style="text-align: left;">
+                </textarea>
+            </div>
+            <div class="oracion">
+                <li>
+                    En un principio podríamos pensar que <em>n/2</em> es el límite superior con el que debemos probar para ver si un número es primo, pero sólo necesitamos llegar hasta la raíz cuadrada de n. ¿Por qué? Vuelva a escribir el programa usando el método <em>Math.sqrt</em> para calcular la raíz cuadrada y ejecútelo de las dos formas. Estime la mejora en el rendimiento.
+                </li>
+                <textarea name="Primos" id="resultadoC" cols="10" rows="20" style="text-align: left;">
+                </textarea>
+            </div>
+        </ol>
+    </div>
+</body>
+</html>
