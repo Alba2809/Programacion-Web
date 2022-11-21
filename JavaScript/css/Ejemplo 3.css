@@ -1,0 +1,9 @@
+.contenedor{ 
+    border-style: groove;
+    text-align: center;
+    font-weight: bold;
+    width: 34em; 
+    font-family: monospace;
+}
+ul    { margin-left: -40px; }
+li    { display: inline-block; width: 8em; }
