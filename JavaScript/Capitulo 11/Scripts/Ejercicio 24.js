@@ -7,7 +7,7 @@ function validar(){
     if(campo.value.length == 9){
         imprimir(campo.value);
     }
-    else{
+    else if(campo.value.length < 9 && campo.value.length > 0){
         var numero = "";
         for(var i = 0; i < (9 - campo.value.length); i++){
             numero += "*";

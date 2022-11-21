@@ -24,36 +24,39 @@
         <h3>
             Encuentre el o los errores en cada uno de los siguientes segmentos de programa y corríjalos.
         </h3>
-        <ol class="boxContent" type="a">
-            <div class="oracion">
-                <li>
-                    <b>var</b> b = <b>new</b> Array(10);<br>
-                    <b>var</b> longitud = b.length; <br>
-                    <b>for</b> ( <b>var</b> i = 0; i <= longitud; ++i ){ <br>
-                    &emsp;b[ i ] = 1; <br>
-                    }
-                </li>
-                <p class="respuesta">
-                    Error en la condición <em>i <= longitud</em>, ya que no existe el índice 10 en el arreglo (sólo es de 0 a 9): <br>
-                    <b>var</b> b = <b>new</b> Array(10);<br>
-                    <b>var</b> longitud = b.length; <br>
-                    <b>for</b> ( <b>var</b> i = 0; i < longitud; ++i ){ <br>
-                    &emsp;b[ i ] = 1; <br>
-                    }
-                </p>
-            </div>
-            <div class="oracion">
-                <li>
-                    <b>var</b> a = [ [1, 2], [3, 4] ]; <br>
-                    a[1, 1] = 5;
-                </li>
-                <p class="respuesta">
-                    Para acceder a un arreglo bidimensional se utilizan doble [ ][ ]: <br>
-                    <b>var</b> a = [ [1, 2], [3, 4] ]; <br>
-                    a[1][1] = 5;
-                </p>
-            </div>
-        </ol>
+        <div class="boxContent">
+
+            <ol type="a">
+                <div class="oracion">
+                    <li>
+                        <b>var</b> b = <b>new</b> Array(10);<br>
+                        <b>var</b> longitud = b.length; <br>
+                        <b>for</b> ( <b>var</b> i = 0; i <= longitud; ++i ){ <br>
+                        &emsp;b[ i ] = 1; <br>
+                        }
+                    </li>
+                    <p class="respuesta">
+                        Error en la condición <em>i <= longitud</em>, ya que no existe el índice 10 en el arreglo (sólo es de 0 a 9): <br>
+                        <b>var</b> b = <b>new</b> Array(10);<br>
+                        <b>var</b> longitud = b.length; <br>
+                        <b>for</b> ( <b>var</b> i = 0; i < longitud; ++i ){ <br>
+                        &emsp;b[ i ] = 1; <br>
+                        }
+                    </p>
+                </div>
+                <div class="oracion">
+                    <li>
+                        <b>var</b> a = [ [1, 2], [3, 4] ]; <br>
+                        a[1, 1] = 5;
+                    </li>
+                    <p class="respuesta">
+                        Para acceder a un arreglo bidimensional se utilizan doble [ ][ ]: <br>
+                        <b>var</b> a = [ [1, 2], [3, 4] ]; <br>
+                        a[1][1] = 5;
+                    </p>
+                </div>
+            </ol>
+        </div>
     </div>
 </body>
 </html>

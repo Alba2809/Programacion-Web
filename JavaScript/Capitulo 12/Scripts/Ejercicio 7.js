@@ -1,5 +1,5 @@
 var tabla;
-var mosaicos = [
+var crucigrama = [
     [0,0,0,0],
     [0,0,0,0],
     [0,0,0,0],
@@ -27,14 +27,14 @@ function mover(celda){
     }
     if(clicks.length == 2){
         if(clicks[1].innerHTML == 0){
-            for(var x in mosaicos){
-                for(var y in mosaicos){
-                    if(mosaicos[x][y] == clicks[0].innerHTML){
+            for(var x in crucigrama){
+                for(var y in crucigrama){
+                    if(crucigrama[x][y] == clicks[0].innerHTML){
                         xCelda1 = x;
                         yCelda1 = y;
                         //console.log("x1: " + x + " y1: " + y);
                     }
-                    if(mosaicos[x][y] == clicks[1].innerHTML){
+                    if(crucigrama[x][y] == clicks[1].innerHTML){
                         xCelda2 = x;
                         yCelda2 = y;
                         //console.log("x2: " + x + " y2: " + y);
@@ -60,9 +60,9 @@ function mover(celda){
 }
 
 function actualizarTabla(x1, y1, x2, y2){
-    var temp = mosaicos[x1][y1];
-    mosaicos[x1][y1] = mosaicos[x2][y2];
-    mosaicos[x2][y2] = temp;
+    var temp = crucigrama[x1][y1];
+    crucigrama[x1][y1] = crucigrama[x2][y2];
+    crucigrama[x2][y2] = temp;
 }
 
 function adyacentes(x1, y1, x2, y2){
@@ -91,13 +91,13 @@ function reiniciar(){
         asignarMosaicos();
     }
     var t = "<table border='1px'><tbody>";
-    for(var x in mosaicos){
+    for(var x in crucigrama){
         t += "<tr>";
-        for(var y in mosaicos[x]){
-            if(mosaicos[x][y] != 0)
-                t += "<td name='celda' value='" + mosaicos[x][y]+ "'>" + mosaicos[x][y] + "</td>";
+        for(var y in crucigrama[x]){
+            if(crucigrama[x][y] != 0)
+                t += "<td name='celda' value='" + crucigrama[x][y]+ "'>" + crucigrama[x][y] + "</td>";
             else
-                t += "<td name='celda' value='" + mosaicos[x][y]+ "'> </td>";
+                t += "<td name='celda' value='" + crucigrama[x][y]+ "'> </td>";
             //id++;
         }
         t += "</tr>";
@@ -114,11 +114,11 @@ function asignarMosaicos(){
     temp.push(numero);
     var posicionX = Math.floor(Math.random() * 4);
     var posicionY = Math.floor(Math.random() * 4);
-    while(mosaicos[posicionX][posicionY] != 0){
+    while(crucigrama[posicionX][posicionY] != 0){
         posicionX = Math.floor(Math.random() * 4);
         posicionY = Math.floor(Math.random() * 4);
     }
-    mosaicos[posicionX][posicionY] = numero;
+    crucigrama[posicionX][posicionY] = numero;
 }
 
 window.addEventListener("load", iniciar, false);
